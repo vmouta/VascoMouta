@@ -13,7 +13,7 @@
     <title>Vasco Mouta - IT Consultant</title>
     
     <!-- Application root. -->
-  	<base href="/VascoMouta/">
+  	<base href="/">
     
     <!-- Google plus -->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -84,12 +84,50 @@
 					  <a rel="me" href="https://plus.google.com/u/0/106561235173495704075"></a>
 					  <p></p>
 					</div>
+					
+					<div class="row">
+				        <div class="col-mid-4">
+				            <form action="http://localhost:9001/api/message?key=81022020150312140e429f3f575fef2b31c436c1a6c394" method="post" id="messageForm" class="form">
+				            <div class="get-in-touch">
+				                <h3 class="text-center">
+				                    Get in Touch</h3>
+				                <div class="form-group">
+				                    <input type="text" class="form-control" name="name" id="name" placeholder="Name" required/>
+				                </div>
+				                <div class="form-group">
+				                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" required/>
+				                </div>
+				                
+				                <div class="form-group">
+					                <select id="subject" name="subject" class="form-control" required="required">
+					                      <option value="na" selected="">Choose Subject:</option>
+					                      <option value="service" >Friendship request</option>
+					                      <option value="suggestions">Business proposition</option>
+					                      <option value="product">Event invitation</option>
+					                      <option value="product">Other</option>
+					                 </select>
+				                </div>
+				                <div class="form-group">
+				                    <textarea name="message" id="message" class="form-control" rows="3" placeholder="Message" required></textarea>
+				                </div>
+				                <button type="submit" class="btn btn-skin btn-block" id="btnContactUs">Send Message</button>
+				            </div>
+				            </form>
+				        </div>
+				    </div>
            			
          		</div>
 
          		<div class="mastfoot">
            			<div class="inner">
              			<p>&copy;Copyright 2015 Vasco Mouta design by Vasco Mouta </a><a rel="author" href="https://plus.google.com/106561235173495704075?rel=author">Google+</a></p>
+             			
+             			<form action="http://localhost:9001/api/subscribe?key=81022020150312140e429f3f575fef2b31c436c1a6c394" method="post" id="newsletterForm" class="form-inline signup" role="form">
+					  		<div class="form-group">
+					    		<input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email for news" title="Enter email for Zucred news">
+					  		</div>
+					  		<button type="submit" class="btn btn-theme">Subscribe</button>
+						</form>
            			</div>
          		</div>
        		</div>
@@ -104,5 +142,45 @@
 	<script src="js/docs.min.js"></script>
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<script src="js/ie10-viewport-bug-workaround.js"></script>
+	
+	<!-- Core JavaScript Files -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    
+    <!-- Newsletter submition -->
+	<script>
+		// Attach a submit handler to the form
+		$( "#newsletterForm" ).submit(function( event ) {
+			// Stop form from submitting normally
+			event.preventDefault();
+			// Get some values from elements on the page:
+			var $form = $( this ),
+			url = $form.attr( "action" );
+			var posting = $.post( url, $( "#newsletterForm" ).serializeArray());
+			// Put the results in a div
+			posting.done(function( data ) {
+				alert('Success!');
+				var content = $( data ).find( "#content" );
+				$( "#result" ).empty().append( content );
+			});
+			return false;
+		});
+		
+		// Attach a submit handler to the form
+		$( "#messageForm" ).submit(function( event ) {
+			// Stop form from submitting normally
+			event.preventDefault();
+			// Get some values from elements on the page:
+			var $form = $( this ),
+			url = $form.attr( "action" );
+			var posting = $.post( url, $( "#messageForm" ).serializeArray());
+			// Put the results in a div
+			posting.done(function( data ) {
+				alert('Thank you!');
+				var content = $( data ).find( "#content" );
+				$( "#result" ).empty().append( content );
+			});
+			return false;
+		});
+	</script>
 </body>
 </html>
