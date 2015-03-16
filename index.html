@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
      
-      
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Vasco Mouta home page">
     <meta name="author" content="Vasco mouta, vasco.mouta@gmail.com">
-    <meta name="rating" content="safe for kid">
-    
+    <meta name="rating" content="safe for kid">  
+
     <!-- Application Title. -->
     <title>Vasco Mouta - IT Consultant</title>
+    
+    <!-- Application root. -->
+  	<base href="/VascoMouta/">
     
     <!-- Google plus -->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -25,31 +29,80 @@
          ga('send', 'pageview');
     </script>
     
-  </head>
-  <body>
-    <h1>Welcome to Vasco Mouta website</h1>
-    <p></p>
-    <div class="g-person" data-width="180" data-href="//plus.google.com/u/0/106561235173495704075" data-theme="dark" data-rel="author"></div>
-    <p></p>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/cover.css" rel="stylesheet">
     
-    <div itemscope itemtype="http://data-vocabulary.org/Person">
-	  My name is <span itemprop="name">Vasco Mouta</span>, 
-	  but people call me <span itemprop="nickname">Vasco</span>.
-	  Here is my homepage: 
-	  <a href="http://www.vascomouta.com" itemprop="url">www.vascomouta.com</a>.
-	  I live in 
-	  <span itemprop="address" itemscope
-	    itemtype="http://data-vocabulary.org/Address">
-	    <span itemprop="region">Zurich</span> 
-	    <span itemprop="country-name">Switzerland</span> 
-	  </span>
-	  and work as an <span itemprop="title">Computer Engineer</span>
-	  at <span itemprop="affiliation">Zucred</span>.
-	  <a rel="me" href="https://plus.google.com/u/0/106561235173495704075"></a>
-	  <p></p>
-	  <img width="180" itemprop="photo" src="img/me.jpg"/>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+  
+<body>
+	<div class="site-wrapper">
+    	<div class="site-wrapper-inner">
+       		<div class="cover-container">
+				<div class="masthead clearfix">
+           			<div class="inner">
+             			<h3 class="masthead-brand">Vasco Mouta</h3>
+		             	<nav>
+		               		<ul class="nav masthead-nav">
+		                 		<li class="active"><a href="#">Home</a></li>
+		                 		<li><a href="#">Features</a></li>
+		                 		<li><a href="#">Contact</a></li>
+		               		</ul>
+		             	</nav>
+           			</div>
+         		</div>
+
+         		<div class="inner cover">
+           			<h1 class="cover-heading">Vasco Mouta Cover page.</h1>
+           			<div class="g-person" data-width="180" data-href="//plus.google.com/u/0/106561235173495704075" data-theme="dark" data-rel="author"></div>
+           			
+           			<div itemscope itemtype="http://data-vocabulary.org/Person">
+					  My name is <span itemprop="name">Vasco Mouta</span>, 
+					  but people call me <span itemprop="nickname">Vasco</span>.
+					  Here is my homepage: 
+					  <a href="http://www.vascomouta.com" itemprop="url">www.vascomouta.com</a>.
+					  I live in 
+					  <span itemprop="address" itemscope
+					    itemtype="http://data-vocabulary.org/Address">
+					    <span itemprop="region">Zurich</span> 
+					    <span itemprop="country-name">Switzerland</span> 
+					  </span>
+					  and work as an <span itemprop="title">Computer Engineer</span>
+					  at <span itemprop="affiliation">Zucred</span>.
+					  <a rel="me" href="https://plus.google.com/u/0/106561235173495704075"></a>
+					  <p></p>
+					</div>
+           			
+         		</div>
+
+         		<div class="mastfoot">
+           			<div class="inner">
+             			<p>&copy;Copyright 2015 Vasco Mouta design by Vasco Mouta </a><a rel="author" href="https://plus.google.com/106561235173495704075?rel=author">Google+</a></p>
+           			</div>
+         		</div>
+       		</div>
+     	</div>
 	</div>
-     
-    <p>&copy;Copyright 2015 Vasco Mouta design by Vasco Mouta </a><a rel="author" href="https://plus.google.com/106561235173495704075?rel=author">Google+</a></p>
-  </body>
+
+	<!-- Bootstrap core JavaScript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/docs.min.js"></script>
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script src="js/ie10-viewport-bug-workaround.js"></script>
+</body>
 </html>
