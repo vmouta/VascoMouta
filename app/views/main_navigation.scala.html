@@ -1,0 +1,63 @@
+@(tab : String)
+
+<!--================= Site navigation  ================-->
+<div class="body-overlay"></div>
+<div class="pagenav-holder isDown">
+    <div class="nav-header">
+        <div class="nav-header-image">
+            <img src="@routes.Assets.at("images/nav-img.jpg")" class="respimg" alt="">
+        </div>
+        <div class="nav-header-text">
+            <h2>Vasco Mouta</h2>
+            <h3>IT Solutions Architect</h3>
+        </div>
+    </div>
+    <div class="menu-holder">
+        <div id="menu">
+            <!-- level 1 -->
+            <ul>
+                <li>
+                    <a href="index.html" class="@if(tab.equals("home")) {active} no-vismen ajax">Home </a>
+                </li>
+                <li>
+                    <a href="portfolio.html" class="@if(tab.equals("portfolio")) {active} no-vismen ajax">  Portfolio </a>
+                </li>
+                <li>
+                    <a href="resume.html" class="@if(tab.equals("resume")) {active} no-vismen ajax">  Resume </a>
+                </li>
+                <li>
+                    <a href="blog.html" class="@if(tab.equals("blog")) {active} no-vismen ajax">  Blog </a>
+                </li>
+                <li>
+                    <a href="contact.html" class="@if(tab.equals("contact")) {active} no-vismen ajax">  Contact</a>
+                </li>
+                <li>
+                    <a href="#" class="no-vismen"> <i class="fa fa-caret-right transition"></i> Language </a>
+                    <!-- level 2 -->
+                    <ul>
+                        <li>
+                            <a href="#"> <i class="no-vismen active ajax"></i> @if(lang().code().equals("en")) {*} English </a>
+                            <a href="#"> <i class="no-vismen active ajax"></i> @if(lang().code().equals("pt")) {*} Portuguese </a>
+                            <a href="#"> <i class="no-vismen active ajax"></i> @if(lang().code().equals("de")) {*} German </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="close-menu"><i class="fa fa-long-arrow-left"></i></div>
+    <div class="nav-footer">
+        <div class="nav-social">
+            <ul>
+                <li><a href="http://www.facebook.com/vasco.mouta"  target="_blank" class="transition"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="http://twitter.com/vmouta"  target="_blank" class="transition"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="http://www.linkedin.com/pub/vasco-mouta/4/409/640"  target="_blank" class="transition"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="http://plus.google.com/u/0/106561235173495704075"  target="_blank" class="transition"><i class="fa fa-google"></i></a></li>
+                <li><a href="http://www.pinterest.com/vascomouta/"  target="_blank" class="transition"><i class="fa fa-pinterest"></i></a></li>
+                <li><a href="http://instagram.com/vascomouta/"  target="_blank" class="transition"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="http://github.com/vmouta"  target="_blank" class="transition"><i class="fa fa-github"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Site navigation end -->	

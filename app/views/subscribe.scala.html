@@ -1,0 +1,47 @@
+@()
+
+<!--================= Section Subscribe ================-->
+<section>
+    <div class="bg bg-parallax run-par2" style="background-image: url(@routes.Assets.at("images/bg/1.jpg")) "></div>
+    <div class="overlay over-op6"></div>
+    <div class="content"  id="sec5">
+        <div class="container par-con">
+            <div class="section-title">
+                <h2>Subscribe</h2>
+                <span class="separator"></span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="subcribe-form">
+					<form id="subscribe">
+						<input class="enteremail" name="email" id="email" placeholder="Email" spellcheck="false" type="text">
+						<button type="submit" id="subscribe-button" class="subscribe-button">Subscribe</button>
+						<label for="subscribe-email" class="subscribe-message"></label>
+					</form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section end -->
+<!-- Newsletter submition -->
+<script>
+	// Attach a submit handler to the form
+	$( "#subscribe" ).submit(function( event ) {
+		// Stop form from submitting normally
+		event.preventDefault();
+		// Get some values from elements on the page:
+		var $form = $( this ),
+		url = $form.attr( "action" );
+		var posting = $.post( url, $( "#newsletterForm" ).serializeArray());
+		// Put the results in a div
+		posting.done(function( data ) {
+			alert('Success!');
+			var content = $( data ).find( "#content" );
+			$( "#result" ).empty().append( content );
+		});
+		return false;
+	});
+</script>

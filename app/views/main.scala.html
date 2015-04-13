@@ -1,0 +1,31 @@
+@(title: String, page: String)(content: Html)
+
+@scripts = {
+
+}
+
+@base(title, scripts) {
+
+<!--================= main start ================-->
+<div id="main">
+    <div class="loader-holder">
+        <div class="loader-inner loader-vis">
+            <div class="loader"></div>
+        </div>
+    </div>
+    <div id="wrapper">
+        <div class="content-holder">
+		<!--================= Site navigation  ================-->
+	    @main_navigation(page)
+	    <!-- Site navigation end -->
+	    
+		@content
+	
+		<!--================= Site footer  ================-->
+		@main_footer()
+		<!-- Site navigation end -->
+        </div>
+    </div>
+</div>
+<!-- Main end -->
+}

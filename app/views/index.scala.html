@@ -1,0 +1,478 @@
+@(title: String)
+
+
+@main(title, "home") {
+
+	<!--================= Header + Scroll navigation ================-->
+	@navigation_header(false){
+	   <li class="actscroll"><a class="scroll-link" href="#sec1">Home </a></li>
+	   <li><a class="scroll-link" href="#sec2">About</a></li>
+	   <li><a class="scroll-link" href="#sec3">Life</a></li>
+	   <li><a class="scroll-link" href="#sec4">What I do</a></li>
+	   <li><a class="scroll-link" href="#sec10">Hire Me</a></li>
+	}
+	<!--================= Full width parallax image   ================-->
+	<section id="sec1" class="page-title-bg">
+	    <div class="bg bg-parallax" style="background-image: url(@routes.Assets.at("images/bg/1.jpg")) "></div>
+	    <div class="overlay over-op6"></div>
+	    <div class="container">
+	        <div class="content">
+	            <div class="page-title-bg-holder">
+	                <h2>Vasco Mouta </h2>
+	                <div class="clearfix"></div>
+	                <h4>IT Solutions Architect</h4>
+	                <div class="clearfix"></div>
+	                <a href="portfolio.html" class="ajax btn flt-l  trans-btn  transition">My work</a>
+	                <a href="resume.html" class="ajax btn flt-l  trans-btn  transition">My resume</a>
+	            </div>
+	        </div>
+	    </div>
+	    <a class="hero-scroll-btn custom-scroll-link" href="#sec2"><i class="fa fa-angle-double-down"></i></a>
+	</section>
+	<!-- section end -->
+	<!--================= Section about ================-->
+	<section class=" no-padding columns-holder"  id="sec2">
+		<div class="left-column column sh-column">
+	       <div class="bg" style="background-image: url(@routes.Assets.at("images/about/1.jpg")) "></div>
+	        <div class="overlay over-op4"></div>
+	    </div>
+	    <div class="right-column column">
+	       <div class="content">
+	             <div class="container">
+	                 <div class="row align-text">
+	                     <div class="col-md-12">
+	                      <h3>About me</h3>
+	                      <div class="clearfix"></div>
+	                      <div class="separator color-separator flt-l"></div>
+	                      <div class="clearfix"></div>
+	                      <p>My name is Vasco Mouta. From the medieval Spanish name Velasco which possibly meant "crow" in Basque. I’m a computer scientist / entrepreneur / mobile developer / backend developer / passion about electronic originaly from Portugal. I had the opportunity to enlarge my knowledge in different markets such as Switzerland, Finland, Cape Verde and Portugal. Living in different countries, learning and getting adapted to new cultures teach me how to quickly absorb the difference and socialize the local way of living trying to get the best on every different scenario. In the past years I had the chance to embrace the challenge in resources of a small company, the need for diversity in a start-up, the adaptation of merging into a big company, the complexity of an acquisition and the more complex reporting structure that a several management layers of a big company requires, those brought me a wide range of skills and experience I believe not easy to find.
+	                      </p>
+	                  </div>
+	              </div>
+	              <div class="row align-text">
+	                     <div class="col-md-12">
+	                      <h3>My pholosophy</h3>
+	                      <div class="clearfix"></div>
+	                      <div class="separator color-separator flt-l"></div>
+	                      <div class="clearfix"></div>
+	                      <p>As a rowing competition athlete with 13 national championships titles, national team athlete, helped me to understand results matter and not just hard work, to be competitive for so many years requires a constant search for innovation, and new way to optimize and achieve more efficient results. It also, enhanced the work in a team, focused on common goals no matter the differences on the individual responsibilities. This is the mentality I bring into my professional life that helped me obtain great results in my Engineer career as in my brief management experiences. Together with my pleasure to discover and explore new technologies leads me to a fascinate environment with no limits. I believe in social responsibility, that a man’s service to others must be at least in ratio to the character of his own success in life. When one is fortunate enough to gain a measure of material well being, however small, service to others should be uppermost in his mind. Freedom and social responsibility form the basis of my own personal philosophy. Upon them, I believe, depends the very dignity of man.</p>
+	                  </div>
+	              </div>
+	          </div>
+	      </div>
+	   </div>
+	 </section>
+	 <!-- section end -->
+	 <!--================= Section some works style 2  ================-->
+	 <section class="fetworks" id="sec3">
+	    <div class="container">
+	        <div class="section-title">
+	            <h2>A Look into my life</h2>
+	            <div class="separator"></div>
+	            <div class="clearfix"></div>
+	            <p>I have a dog golden retriever named Benjamain, I try to play guitar and love sports. Cooking and preparing food myself give me pleasure, fish and seafood are the ones that make me happy. </p>
+	            <div class="separator"></div>
+	            <div class="clearfix"></div>
+	            <p> On the bar I'll stay around a Mokey 47 or Hendricks tonic and a two stones single malt with dark chocolate.<br/> </p>
+	            <div class="separator"></div>
+	            <div class="clearfix"></div>
+	            <p>I love a piano concerto as I like ballet you may find me watching opera the same way you may find me watching a garage band.</p>
+	        </div>
+	    </div>
+		<div class="content">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-10">
+					 	<div class="filter-button">Filters <i class="fa fa-angle-double-down"></i></div>
+                        <div class="masonry-filters">
+                            <a href="#" class="masonry-filter masonry-filter_active  transition allval"  data-filter="*">View All <span class="num-pr numpr-all"></span></a>		
+                            <a href="#" class="masonry-filter transition" data-filter=".home">At Home <span class="num-pr num-cat"></span></a>
+                            <a href="#" class="masonry-filter transition" data-filter=".water">On The Water <span class="num-pr num-cat"></span></a>
+                            <a href="#" class="masonry-filter transition" data-filter=".road">On The Road <span class="num-pr num-cat"></span></a>
+                            <a href="#" class="masonry-filter transition" data-filter=".bar">On The Bar <span class="num-pr num-cat"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <i class="fa fa-random shuffle-button"></i>  
+                    </div>
+                </div>
+            </div>
+        </div>
+	         <div class="content">
+	             <div class="container">
+	                <div class="ms-grid-items  margin-grid">
+	                     <div class="grid-sizer-two"></div>
+	                     <!-- folio item -->
+	                <div class="box ms-grid-item home">
+	                    <div class="box-item-holder">
+	                        <div class="box-item bl-over">
+	                            <div class="box-item-med">
+	                                <img src="@routes.Assets.at("images/life/home.jpg")" alt="" class="respimg">
+	                                <div class="overlay"></div>
+	                            </div>
+	                            <div class="box-links">
+	                                <a href="@routes.Assets.at("images/life/home.jpg")" class="image-popup lin-h"><i class="fa fa-plus"></i></a>
+	                            </div>
+	                        </div>
+	                        <div class="box-details">
+	                            <h3><a href="" class="ajax">Benjamin </a></h3>
+	                            <h4>The Dog</h4>
+	                        </div>
+	                    </div>
+	                </div>
+	                <!-- folio item -->
+	                <div class="box ms-grid-item   home photography">
+	                    <div class="box-item-holder">
+	                        <div class="box-item bl-over">
+	                            <div class="box-item-med">
+	                                <img src="@routes.Assets.at("images/life/home1.jpg")" alt="" class="respimg">
+	                                <div class="overlay"></div>
+	                            </div>
+	                            <div class="box-links">
+	                                <a href="portfolio-single.html" class="lin-h ajax"><i class="fa fa-link"></i></a>
+	                                <a href="@routes.Assets.at("images/life/home1.jpg")" class="image-popup lin-h"><i class="fa fa-plus"></i></a>
+	                            </div>
+	                        </div>
+	                        <div class="box-details">
+	                            <h3><a href="" class="ajax">Benjamin </a></h3>
+	                            <h4>The Dog</h4>
+	                        </div>
+	                    </div>
+	                </div>
+	                <!-- folio item -->
+	                <div class="box ms-grid-item bar home">
+	                    <div class="box-item-holder">
+	                        <div class="box-item bl-over">
+	                            <div class="box-item-med">
+	                                <img src="@routes.Assets.at("images/life/home2.jpg")" alt="" class="respimg">
+	                                <div class="overlay"></div>
+	                            </div>
+	                            <div class="box-links">
+	                                <a href="portfolio-single.html" class="lin-h ajax"><i class="fa fa-link"></i></a>
+	                                <a href="@routes.Assets.at("images/life/home2.jpg")" class="image-popup lin-h"><i class="fa fa-plus"></i></a>
+	                            </div>
+	                        </div>
+	                        <div class="box-details">
+	                            <h3><a href="portfolio-single.html" class="ajax">Benjamin </a></h3>
+	                            <h4>The Dog</h4>
+	                        </div>
+	                    </div>
+	                </div>
+	                <!-- folio item -->
+	                <div class="box ms-grid-item road">
+	                    <div class="box-item-holder">
+	                        <div class="box-item bl-over">
+	                            <div class="box-item-med">
+	                                <img src="@routes.Assets.at("images/life/road.jpg")" alt="" class="respimg">
+	                                <div class="overlay"></div>
+	                            </div>
+	                            <div class="box-links">
+	                                <a href="portfolio-single.html" class="lin-h ajax"><i class="fa fa-link"></i></a>
+	                                <a href="@routes.Assets.at("images/life/road.jpg")" class="image-popup lin-h"><i class="fa fa-plus"></i></a>
+	                            </div>
+	                        </div>
+	                        <div class="box-details">
+	                            <h3><a href="" class="ajax">Albula, 2315m </a></h3>
+	                            <h4>Road</h4>
+	                        </div>
+	                    </div>
+	                </div>
+	                <!-- folio item -->
+	                <div class="box ms-grid-item road">
+	                    <div class="box-item-holder">
+	                        <div class="box-item bl-over">
+	                            <div class="box-item-med">
+	                                <img src="@routes.Assets.at("images/life/road1.jpg")" alt="" class="respimg">
+	                                <div class="overlay"></div>
+	                            </div>
+	                            <div class="box-links">
+	                                <a href="@routes.Assets.at("images/life/road1.jpg")" class="image-popup lin-h"><i class="fa fa-plus"></i></a>
+	                            </div>
+	                        </div>
+	                        <div class="box-details">
+	                            <h3><a href="portfolio-single.html" class="ajax">Just Lost </a></h3>
+	                            <h4>Road</h4>
+	                        </div>
+	                    </div>
+	                </div>
+	                <!-- folio item -->
+	                <div class="box ms-grid-item road">
+	                    <div class="box-item-holder">
+	                        <div class="box-item bl-over">
+	                            <div class="box-item-med">
+	                                <img src="@routes.Assets.at("images/life/road2.jpg")" alt="" class="respimg">
+	                                <div class="overlay"></div>
+	                            </div>
+	                            <div class="box-links">
+	                                <a href="http://www.zuerimumus.ch/" class="lin-h ajax"><i class="fa fa-link"></i></a>
+	                                <a href="@routes.Assets.at("images/life/road2.jpg")" class="image-popup lin-h"><i class="fa fa-plus"></i></a>
+	                            </div>
+	                        </div>
+	                        <div class="box-details">
+	                            <h3><a href="portfolio-single.html" class="ajax">Bike fellows </a></h3>
+	                            <h4>Zurimumus</h4>
+	                        </div>
+	                    </div>
+	                </div>
+	                <!-- folio item -->
+	                <div class="box ms-grid-item road">
+	                    <div class="box-item-holder">
+	                        <div class="box-item bl-over">
+	                            <div class="box-item-med">
+	                                <img src="@routes.Assets.at("images/life/road3.jpg")" alt="" class="respimg">
+	                                <div class="overlay"></div>
+	                            </div>
+	                            <div class="box-links">
+	                                <a href="http://www.meetup.com/SwissAlpineAdventure/" class="lin-h ajax"><i class="fa fa-link"></i></a>
+	                                <a href="@routes.Assets.at("images/life/road3.jpg")" class="image-popup lin-h"><i class="fa fa-plus"></i></a>
+	                            </div>
+	                        </div>
+	                        <div class="box-details">
+	                            <h3><a href="portfolio-single.html" class="ajax">Bike Fellows</a></h3>
+	                            <h4>Swiss Alpine Adventure</h4>
+	                        </div>
+	                    </div>
+	                </div>
+	                <!-- folio item -->
+	                <div class="box ms-grid-item water">
+	                    <div class="box-item-holder">
+	                        <div class="box-item bl-over">
+	                            <div class="box-item-med">
+	                                <img src="@routes.Assets.at("images/life/water.jpg")" alt="" class="respimg">
+	                                <div class="overlay"></div>
+	                            </div>
+	                            <div class="box-links">
+	                                <a href="http://www.belvoir-rc.ch/" class="lin-h ajax"><i class="fa fa-link"></i></a>
+	                                <a href="@routes.Assets.at("images/life/water.jpg")" class="image-popup lin-h"><i class="fa fa-plus"></i></a>
+	                            </div>
+	                        </div>
+	                        <div class="box-details">
+	                            <h3><a href="portfolio-single.html" class="ajax">The lonely single </a></h3>
+	                            <h4>Belvoir RC</h4>
+	                        </div>
+	                    </div>
+	                </div>
+	                <!-- folio item -->
+	                <div class="box ms-grid-item water">
+	                    <div class="box-item-holder">
+	                        <div class="box-item bl-over">
+	                            <div class="box-item-med">
+	                                <img src="@routes.Assets.at("images/life/water1.jpg")" alt="" class="respimg">
+	                                <div class="overlay"></div>
+	                            </div>
+	                            <div class="box-links">
+	                                <a href="http://portal.asvz.ethz.ch/Events/Seiten/UNI-POLY.aspx" class="lin-h ajax"><i class="fa fa-link"></i></a>
+	                                <a href="@routes.Assets.at("images/life/water1.jpg")" class="image-popup lin-h"><i class="fa fa-plus"></i></a>
+	                            </div>
+	                        </div>
+	                        <div class="box-details">
+	                            <h3><a href="portfolio-single.html" class="ajax">Uni vs Poly </a></h3>
+	                            <h4>Rowing</h4>
+	                        </div>
+	                    </div>
+	                </div>
+	                <!-- folio item -->			
+	                <div class="box ms-grid-item water">
+	                    <div class="box-item-holder">
+	                        <div class="box-item bl-over">
+	                            <div class="box-item-med">
+	                                <img src="@routes.Assets.at("images/life/water2.jpg")" alt="" class="respimg">
+	                                <div class="overlay"></div>
+	                            </div>
+	                            <div class="box-links">
+	                                <a href="http://www.windguru.cz/int/index.php?sc=4167" class="lin-h ajax"><i class="fa fa-link"></i></a>
+	                                <a href="@routes.Assets.at("images/life/water2.jpg")" class="image-popup lin-h"><i class="fa fa-plus"></i></a>
+	                            </div>
+	                        </div>
+	                        <div class="box-details">
+	                            <h3><a href="portfolio-single.html" class="ajax">Surf </a></h3>
+	                            <h4>Water</h4>
+	                        </div>
+	                    </div>
+	                </div>
+	                <!-- folio item -->
+	                <div class="box ms-grid-item bar">
+	                    <div class="box-item-holder">
+	                        <div class="box-item bl-over">
+	                            <div class="box-item-med">
+	                                <img src="@routes.Assets.at("images/life/bar1.jpg")" alt="" class="respimg">
+	                                <div class="overlay"></div>
+	                            </div>
+	                            <div class="box-links">
+	                                <a href="http://hotelrivingtonandsons.ch/" class="lin-h ajax"><i class="fa fa-link"></i></a>
+	                                <a href="@routes.Assets.at("images/life/bar1.jpg")" class="image-popup lin-h"><i class="fa fa-plus"></i></a>
+	                            </div>
+	                        </div>
+	                        <div class="box-details">
+	                            <h3><a href="portfolio-single.html" class="ajax">Hotel Rivington Zurich </a></h3>
+	                            <h4>Bar</h4>
+	                        </div>
+	                    </div>
+	                </div>
+	                <!-- folio item -->
+	                <div class="box ms-grid-item home">
+	                    <div class="box-item-holder">
+	                        <div class="box-item bl-over">
+	                            <div class="box-item-med">
+	                                <img src="@routes.Assets.at("images/life/home3.jpg")" alt="" class="respimg">
+	                                <div class="overlay"></div>
+	                            </div>
+	                            <div class="box-links">
+	                                <a href="@routes.Assets.at("images/life/home3.jpg")" class="image-popup lin-h"><i class="fa fa-plus"></i></a>
+	                            </div>
+	                        </div>
+	                        <div class="box-details">
+	                            <h3><a href="portfolio-single.html" class="ajax">Electronic Passion </a></h3>
+	                            <h4>Work</h4>
+	                        </div>
+	                    </div>
+	                </div>
+	                <!-- folio item -->
+	                <div class="box ms-grid-item home">
+	                    <div class="box-item-holder">
+	                        <div class="box-item bl-over">
+	                            <div class="box-item-med">
+	                                <img src="@routes.Assets.at("images/life/home4.jpg")" alt="" class="respimg">
+	                                <div class="overlay"></div>
+	                            </div>
+	                            <div class="box-links">
+	                                <a href="@routes.Assets.at("images/life/home4.jpg")" class="image-popup lin-h"><i class="fa fa-plus"></i></a>
+	                            </div>
+	                        </div>
+	                        <div class="box-details">
+	                            <h3><a href="portfolio-single.html" class="ajax">The Desk </a></h3>
+	                            <h4>Work</h4>
+	                        </div>
+	                    </div>
+	                </div>
+	                <!-- folio item -->
+	                <div class="box ms-grid-item home bar">
+	                    <div class="box-item-holder">
+	                        <div class="box-item bl-over">
+	                            <div class="box-item-med">
+	                                <img src="@routes.Assets.at("images/life/home5.jpg")" alt="" class="respimg">
+	                                <div class="overlay"></div>
+	                            </div>
+	                            <div class="box-links">
+	                                <a href="http://www2.gibson.com/Products/Electric-Guitars/Les-Paul/Gibson-USA/Slash-Appetite-Les-Paul/Specs.aspx" class="lin-h ajax"><i class="fa fa-link"></i></a>
+	                                <a href="@routes.Assets.at("images/life/home5.jpg")" class="image-popup lin-h"><i class="fa fa-plus"></i></a>
+	                            </div>
+	                        </div>
+	                        <div class="box-details">
+	                            <h3><a href="portfolio-single.html" class="ajax">My Gibson </a></h3>
+	                            <h4>Music</h4>
+	                        </div>
+	                    </div>
+	                </div>
+	                <!-- folio item -->
+	                <div class="box ms-grid-item bar">
+	                    <div class="box-item-holder">
+	                        <div class="box-item bl-over">
+	                            <div class="box-item-med">
+	                                <img src="@routes.Assets.at("images/life/bar2.png")" alt="" class="respimg">
+	                                <div class="overlay"></div>
+	                            </div>
+	                            <div class="box-links">
+	                                <a href="@routes.Assets.at("images/life/bar2.png")" class="image-popup lin-h"><i class="fa fa-plus"></i></a>
+	                            </div>
+	                        </div>
+	                        <div class="box-details">
+	                            <h3><a href="portfolio-single.html" class="ajax">The French fellows  </a></h3>
+	                            <h4>Bar</h4>
+	                        </div>
+	                    </div>
+	                </div>
+	                <!-- folio item -->
+	                <div class="box ms-grid-item bar">
+	                    <div class="box-item-holder">
+	                        <div class="box-item bl-over">
+	                            <div class="box-item-med">
+	                                <img src="@routes.Assets.at("images/life/bar3.jpg")" alt="" class="respimg">
+	                                <div class="overlay"></div>
+	                            </div>
+	                            <div class="box-links">
+	                                <a href="@routes.Assets.at("images/life/bar3.jpg")" class="image-popup lin-h"><i class="fa fa-plus"></i></a>
+	                            </div>
+	                        </div>
+	                        <div class="box-details">
+	                            <h3><a href="portfolio-single.html" class="ajax">The music fellows </a></h3>
+	                            <h4>Music</h4>
+	                        </div>
+	                    </div>
+	                </div>
+	                <!-- folio item -->
+	                <div class="box ms-grid-item home">
+	                    <div class="box-item-holder">
+	                        <div class="box-item bl-over">
+	                            <div class="box-item-med">
+	                                <img src="@routes.Assets.at("images/life/food1.jpg")" alt="" class="respimg">
+	                                <div class="overlay"></div>
+	                            </div>
+	                            <div class="box-links">
+	                                <a href="@routes.Assets.at("images/life/food1.jpg")" class="image-popup lin-h"><i class="fa fa-plus"></i></a>
+	                            </div>
+	                        </div>
+	                        <div class="box-details">
+	                            <h3><a href="portfolio-single.html" class="ajax">My fish </a></h3>
+	                            <h4>Cooking</h4>
+	                        </div>
+	                    </div>
+	                </div>
+	                <!-- folio item -->
+	                <div class="box ms-grid-item home">
+	                    <div class="box-item-holder">
+	                        <div class="box-item bl-over">
+	                            <div class="box-item-med">
+	                                <img src="@routes.Assets.at("images/life/food2.jpg")" alt="" class="respimg">
+	                                <div class="overlay"></div>
+	                            </div>
+	                            <div class="box-links">
+	                                <a href="portfolio-single.html" class="lin-h ajax"><i class="fa fa-link"></i></a>
+	                                <a href="@routes.Assets.at("images/life/food2.jpg")" class="image-popup lin-h"><i class="fa fa-plus"></i></a>
+	                            </div>
+	                        </div>
+	                        <div class="box-details">
+	                            <h3><a href="portfolio-single.html" class="ajax">My Seafood </a></h3>
+	                            <h4>Cooking</h4>
+	                        </div>
+	                    </div>
+	                </div>
+	                <!-- load more nav -->  
+	                <nav id="infiniti_nav">
+	                    <a href="2.html"></a>
+	                </nav>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+	<!--================= Section quotes  ================-->
+	@quotes()
+	<!-- section end -->
+	<!--================= Section what I do  ================-->
+	 <section class="fetworks" id="sec4">
+	    <div class="container">
+	        <div class="section-title">
+	            <h2>What I do?</h2>
+	            <div class="separator"></div>
+	            <div class="clearfix"></div>
+	            <p>. </p>
+	            <div class="separator"></div>
+	            <div class="clearfix"></div>
+	            <p>.<br/> </p>
+	            <div class="separator"></div>
+	            <div class="clearfix"></div>
+	            <p>.</p>
+	            <a href="#" class="btn clr-btn anim-button transition"><span>Download resume</span><i class="fa fa-download"></i></a>
+	        </div>
+	    </div>
+	</section>
+	<!--================= Section hireme  ================-->
+	@hireme()
+	<!-- section end -->
+	<!--================= Section facts  ================-->
+	@facts()
+	<!-- section end -->
+	<!--================= Section widgets  ================-->
+    @widgets()
+    <!-- section end -->
+}
