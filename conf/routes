@@ -9,7 +9,10 @@ GET     /portfolio.html             controllers.Application.protfolio()
 GET     /resume.html             	controllers.Application.resume()
 GET     /blog.html               	controllers.Application.blog()
 GET     /contact.html               controllers.Application.contact()
+GET     /signature.html             controllers.Assets.at(path="/public", file="signature.html")
+GET     /vasco_signature.html       controllers.Assets.at(path="/public", file="signature.html")
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/js/routes.js    	controllers.Application.jsRoutes
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET     /vcard/*file                controllers.Assets.at(path="/public", file)
