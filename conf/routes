@@ -3,16 +3,29 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index()
-GET     /index.html                 controllers.Application.index()
-GET     /portfolio.html             controllers.Application.protfolio()
-GET     /resume.html             	controllers.Application.resume()
-GET     /blog.html               	controllers.Application.blog()
-GET     /contact.html               controllers.Application.contact()
-GET     /signature.html             controllers.Assets.at(path="/public", file="signature.html")
-GET     /vasco_signature.html       controllers.Assets.at(path="/public", file="signature.html")
+GET     /                           	controllers.Application.index()
+GET     /index.html                 	controllers.Application.index()
+GET     /portfolio.html             	controllers.Application.protfolio()
+GET     /resume.html             		controllers.Application.resume()
+GET     /blog.html               		controllers.Application.blog()
+GET     /contact.html               	controllers.Application.contact()
+
+GET		/portfolio/alianca.html			controllers.Portfolio.alianca
+GET		/portfolio/beetagg.html			controllers.Portfolio.beetagg
+GET		/portfolio/boat24.html			controllers.Portfolio.boat24
+GET		/portfolio/caravan24.html		controllers.Portfolio.caravan24
+GET		/portfolio/irma.html			controllers.Portfolio.irma
+GET		/portfolio/kilimosalama.html	controllers.Portfolio.kilimosalama
+GET		/portfolio/localina.html		controllers.Portfolio.localina
+GET		/portfolio/premfire.html		controllers.Portfolio.premfire
+GET		/portfolio/skimondo.html		controllers.Portfolio.skimondo
+GET		/portfolio/surfkitchen.html		controllers.Portfolio.surfkitchen
+GET		/portfolio/zeerio.html			controllers.Portfolio.zeerio
+
+GET     /signature.html             	controllers.Assets.at(path="/public", file="signature.html")
+GET     /vasco_signature.html       	controllers.Assets.at(path="/public", file="signature.html")
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/js/routes.js    	controllers.Application.jsRoutes
-GET     /assets/*file               controllers.Assets.at(path="/public", file)
-GET     /*file			            controllers.Assets.at(path="/public", file)
+GET     /assets/js/routes.js    		controllers.Application.jsRoutes
+GET     /assets/*file               	controllers.Assets.at(path="/public", file)
+GET     /*file			            	controllers.Assets.at(path="/public", file)
