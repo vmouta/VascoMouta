@@ -2117,6 +2117,35 @@ footer h5 {
 .test-image img {
 	border-radius:100%;
 }
+
+.vasco {
+	 margin: bottom 0px;
+}
+
+.company-image {
+	position:relative;
+	width:90px;
+	height:90px;
+	border-radius:0%;
+	overflow:hidden;
+}
+
+.company-image img {
+	border-radius:0%;
+}
+
+.square-image {
+	position:relative;
+	width:90px;
+	height:90px;
+	border:2px solid #fff;
+	margin:0 auto 20px;
+	border-radius:100%;
+	overflow:hidden;
+}
+.square-image img {
+	border-radius:5%;
+}
 .content-testi  a{
 	padding-top:10px;
 	color:#494949;
@@ -2349,6 +2378,7 @@ footer h5 {
 	padding-right:30px;
 	list-style: disc;
 }
+
 /*------ resume - ------------------------------------------------*/
 .resume-container {
 	float:left;

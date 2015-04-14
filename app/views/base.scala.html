@@ -1,4 +1,4 @@
-@(title: String, scripts: Html = Html(""))(body: Html)
+@(title: String, css: Html = Html(""), scripts: Html = Html(""))(body: Html)
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,6 +33,7 @@
         <link rel="stylesheet" type="text/css" href="@routes.Assets.at("css/plugins.css")" media="screen">
         <link rel="stylesheet" type="text/css" href="@routes.Assets.at("css/style.css")">
         <link rel="stylesheet" type="text/css" href="@routes.Assets.at("css/color.css")">
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.at("css/vascomouta.css")">
         <!--=============== favicons ===============-->
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
         
@@ -45,9 +46,9 @@
 		<!-- Javascript populated routes -->
 		<script type="text/javascript" src="@routes.Application.jsRoutes" defer="defer"></script>
 	    
-		<!-- Dynamic scripts 
+		<!-- Dynamic css 
 		================================================== -->
-		@scripts
+		@css
 	</head>
 
 	<body>
@@ -58,9 +59,14 @@
         <!--=============== google map ===============-->
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 		<!--=============== javascript ===============-->		
-        <script type="text/javascript" src="@routes.Assets.at("js/jquery.min.js")"></script>
+        <script type="text/javascript" src="@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))"></script>
+		<script type="text/javascript" src="@routes.WebJarAssets.at(WebJarAssets.locate("jquery-ui.min.js"))"></script>
+		<script type="text/javascript" src="@routes.WebJarAssets.at(WebJarAssets.locate("bootstrap.min.js"))"></script>
         <script type="text/javascript" src="@routes.Assets.at("js/plugins.js")"></script>
         <script type="text/javascript" src="@routes.Assets.at("js/core.js")"></script>
         <script type="text/javascript" src="@routes.Assets.at("js/scripts.js")"></script>
+        <!-- Dynamic js 
+		================================================== -->
+		@scripts
 	</body>
 </html>

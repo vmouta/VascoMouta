@@ -26,6 +26,7 @@ GET     /signature.html             	controllers.Assets.at(path="/public", file=
 GET     /vasco_signature.html       	controllers.Assets.at(path="/public", file="signature.html")
 
 # Map static resources from the /public folder to the /assets URL path
+GET     /webjars/*file              	controllers.WebJarAssets.at(file)
 GET     /assets/js/routes.js    		controllers.Application.jsRoutes
 GET     /assets/*file               	controllers.Assets.at(path="/public", file)
 GET     /*file			            	controllers.Assets.at(path="/public", file)
