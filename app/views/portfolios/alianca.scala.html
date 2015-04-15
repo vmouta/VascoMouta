@@ -1,7 +1,12 @@
 ﻿
 @()
 
-@main("Vasco Mouta", "portfolio") {
+@tags = {
+	<meta name="keywords" content=""/>
+    <meta name="description" content="Vasco Mouta - alianca">
+}
+
+@main("Vasco Mouta", "portfolio")(tags) {
 
 	<!--================= Header + Scroll navigation ================-->
 	@navigation_header(true)()
@@ -154,7 +159,7 @@
                 <div class="project-pagination">
                     <ul>
                         <li>
-                            <a class="ajax left-nav" href="/portfolio/premfire.html">
+                            <a class="ajax left-nav" href="/@{lang().code()}/portfolio/premfire.html">
                                 <i class="fa fa-angle-left"></i>
                                 <div class="tooltip">
                                     <img src="/images/folio/premfire.jpg" class="respimg" alt="" title="">
@@ -162,9 +167,9 @@
                                 </div>
                             </a>
                         </li>
-                        <li><a href="/portfolio.html" class="ajax"><i class="fa fa-indent"></i></a></li>
+                        <li><a href="/@{lang().code()}/portfolio.html" class="ajax"><i class="fa fa-indent"></i></a></li>
                         <li>
-                            <a class="ajax right-nav" href="/portfolio/irma.html">
+                            <a class="ajax right-nav" href="/@{lang().code()}/portfolio/irma.html">
                                 <i class="fa fa-angle-right"></i>
                                 <div class="tooltip">
                                     <img src="/images/folio/irma.jpg" class="respimg" alt="" title="">

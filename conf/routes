@@ -3,24 +3,32 @@
 # ~~~~
 
 # Home page
-GET     /                           	controllers.Application.index()
-GET     /index.html                 	controllers.Application.index()
-GET     /portfolio.html             	controllers.Application.protfolio()
-GET     /resume.html             		controllers.Application.resume()
-GET     /blog.html               		controllers.Application.blog()
-GET     /contact.html               	controllers.Application.contact()
+GET     /                           		controllers.Application.index()
+GET     /$lang<[a-z]{2}>					controllers.Application.indexI18n(lang: String)
+GET     /$lang<[a-z]{2}>/					controllers.Application.indexI18n(lang: String)
+GET     /$lang<[a-z]{2}>/home.html			controllers.Application.home(lang: String)
+GET     /$lang<[a-z]{2}-[^/]+>/home.html	controllers.Application.home(lang: String)
 
-GET		/portfolio/alianca.html			controllers.Portfolio.alianca
-GET		/portfolio/beetagg.html			controllers.Portfolio.beetagg
-GET		/portfolio/boat24.html			controllers.Portfolio.boat24
-GET		/portfolio/caravan24.html		controllers.Portfolio.caravan24
-GET		/portfolio/irma.html			controllers.Portfolio.irma
-GET		/portfolio/kilimosalama.html	controllers.Portfolio.kilimosalama
-GET		/portfolio/localina.html		controllers.Portfolio.localina
-GET		/portfolio/premfire.html		controllers.Portfolio.premfire
-GET		/portfolio/skimondo.html		controllers.Portfolio.skimondo
-GET		/portfolio/surfkitchen.html		controllers.Portfolio.surfkitchen
-GET		/portfolio/zeerio.html			controllers.Portfolio.zeerio
+GET     /$lang<[a-z]{2}>/portfolio.html     controllers.Application.protfolio(lang: String)
+GET     /$lang<[a-z]{2}>/resume.html        controllers.Application.resume(lang: String)
+GET     /$lang<[a-z]{2}>/blog.html          controllers.Application.blog(lang: String)
+GET     /$lang<[a-z]{2}>/contact.html       controllers.Application.contact(lang: String)
+
+GET		/$lang<[a-z]{2}>/portfolio/alianca.html				controllers.Portfolio.alianca(lang: String)
+GET		/$lang<[a-z]{2}>/portfolio/beetagg.html				controllers.Portfolio.beetagg(lang: String)
+GET		/$lang<[a-z]{2}>/portfolio/boat24.html				controllers.Portfolio.boat24(lang: String)
+GET		/$lang<[a-z]{2}>/portfolio/caravan24.html			controllers.Portfolio.caravan24(lang: String)
+GET		/$lang<[a-z]{2}>/portfolio/irma.html				controllers.Portfolio.irma(lang: String)
+GET		/$lang<[a-z]{2}>/portfolio/kilimosalama.html		controllers.Portfolio.kilimosalama(lang: String)
+GET		/$lang<[a-z]{2}>/portfolio/localina.html			controllers.Portfolio.localina(lang: String)
+GET		/$lang<[a-z]{2}>/portfolio/premfire.html			controllers.Portfolio.premfire(lang: String)
+GET		/$lang<[a-z]{2}>/portfolio/skimondo.html			controllers.Portfolio.skimondo(lang: String)
+GET		/$lang<[a-z]{2}>/portfolio/surfkitchen.html			controllers.Portfolio.surfkitchen(lang: String)
+GET		/$lang<[a-z]{2}>/portfolio/zeerio.html				controllers.Portfolio.zeerio(lang: String)
+
+# Global router
+GET     /$lang<[a-z]{2}>/*path			controllers.Application.routerI18n(lang: String, path: String)
+GET     /$lang<[a-z]{2}-[^/]+>/*path	controllers.Application.routerI18n(lang: String, path: String)
 
 GET     /signature.html             	controllers.Assets.at(path="/public", file="signature.html")
 GET     /vasco_signature.html       	controllers.Assets.at(path="/public", file="signature.html")

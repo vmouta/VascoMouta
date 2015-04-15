@@ -1,7 +1,11 @@
 @(title: String)
 
+@tags = {
+	<meta name="keywords" content=""/>
+   	<meta name="description" content="Vasco Mouta home page">
+}
 
-@main(title, "home") {
+@main(title, "home")(tags) {
 
 	<!--================= Header + Scroll navigation ================-->
 	@navigation_header(false){

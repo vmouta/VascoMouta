@@ -1,10 +1,14 @@
-@(title: String, page: String)(content: Html)
+@(title: String, page: String)(parentCss: Html = Html(""), parentScripts: Html = Html(""))(content: Html)
 
-@scripts = {
-
+@css = {
+	@parentCss
 }
 
-@base(title, scripts) {
+@scripts = {
+	@parentScripts
+}
+
+@base(title, css, scripts) {
 
 <!--================= main start ================-->
 <div id="main">

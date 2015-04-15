@@ -11,8 +11,6 @@
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="robots" content="index, follow"/>
-        <meta name="keywords" content=""/>
-        <meta name="description" content="Vasco Mouta home page">
         <meta name="author" content="Vasco mouta, vasco.mouta@@gmail.com">
         <meta name="rating" content="safe for kid">
         
@@ -26,6 +24,7 @@
 	        ga('create', 'UA-31434677-1', 'auto');
 	        ga('send', 'pageview');
 	    </script>
+	    
         <!-- Social Profiles -->
         <script type="application/ld+json">
 			{ "@@context" : "http://schema.org",
@@ -34,13 +33,32 @@
   				"url" : "http://www.vascomouta.com",
   				"sameAs" : [ "http://www.facebook.com/vasco.mouta",
       						"http://twitter.com/vmouta",
-      						"href="http://www.linkedin.com/pub/vasco-mouta/4/409/640",
+      						"http://www.linkedin.com/pub/vasco-mouta/4/409/640",
       						"http://google.com/+VascoMouta",
 							"http://www.pinterest.com/vascomouta/",
 							"http://instagram.com/vascomouta/",
 							"http://github.com/vmouta"] 
 			}
 		</script>
+		
+		<!-- languages -->
+		@if(lang().code().equals("pt")) {
+			<link rel="alternate" href="http://vascomouta.com/en" hreflang="en" />
+			<link rel="alternate" href="http://vascomouta.com/de" hreflang="de" />
+		} 
+		
+		@if(lang().code().equals("de")) {
+			<link rel="alternate" href="http://vascomouta.com/en" hreflang="en" />
+			<link rel="alternate" href="http://vascomouta.com/pt" hreflang="pt" />
+		} 
+		@if(lang().code().equals("en")) {
+			<link rel="alternate" href="http://vascomouta.com/de" hreflang="de" />
+			<link rel="alternate" href="http://vascomouta.com/pt" hreflang="pt" />
+		} else {
+			<link rel="alternate" href="http://vascomouta.com/en" hreflang="en" />
+			<link rel="alternate" href="http://vascomouta.com/de" hreflang="de" />
+			<link rel="alternate" href="http://vascomouta.com/pt" hreflang="pt" />
+		}
         
         <!--=============== css  ===============-->	
         <link rel="stylesheet" type="text/css" href="@routes.Assets.at("css/bootstrap.css")" media="all">

@@ -1,7 +1,12 @@
 ﻿
 @()
 
-@main("Vasco Mouta - boat24.ch", "portfolio") {
+@tags = {
+	<meta name="keywords" content=""/>
+	<meta name="description" content="Vasco Mouta - boat24.ch">
+}
+
+@main("Vasco Mouta - boat24.ch", "portfolio")(tags) {
 
 	<!--================= Header + Scroll navigation ================-->
 	@navigation_header(true)()
@@ -158,7 +163,7 @@
                 <div class="project-pagination">
                     <ul>
                         <li>
-                            <a class="ajax left-nav" href="/portfolio/zeerio.html">
+                            <a class="ajax left-nav" href="/@{lang().code()}/portfolio/zeerio.html">
                                 <i class="fa fa-angle-left"></i>
                                 <div class="tooltip">
                                     <img src="/images/folio/zeerio.jpg" class="respimg" alt="" title="">
@@ -166,9 +171,9 @@
                                 </div>
                             </a>
                         </li>
-                        <li><a href="/portfolio.html" class="ajax"><i class="fa fa-indent"></i></a></li>
+                        <li><a href="/@{lang().code()}/portfolio.html" class="ajax"><i class="fa fa-indent"></i></a></li>
                         <li>
-                            <a class="ajax right-nav" href="/portfolio/caravan24.html">
+                            <a class="ajax right-nav" href="/@{lang().code()}/portfolio/caravan24.html">
                                 <i class="fa fa-angle-right"></i>
                                 <div class="tooltip">
                                     <img src="/images/folio/caravan24.png" class="respimg" alt="" title="">
