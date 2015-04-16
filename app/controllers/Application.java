@@ -58,11 +58,6 @@ public class Application extends AppController {
         return ok(resume.render());
     }
     
-    public static Result blog(String lang) {
-    	if(needLanguageRedirect(lang)) return redirect("/"+ lang().code() + "/blog.html");
-        return ok(contact.render());
-    }
-    
     public static Result contact(String lang) {
     	if(needLanguageRedirect(lang)) return redirect("/"+ lang().code() + "/contact.html");
         return ok(contact.render());

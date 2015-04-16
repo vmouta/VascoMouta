@@ -56,6 +56,8 @@ public class Post  implements java.io.Serializable {
 
     private java.lang.String filter;
 
+    private com.bkahlert.wpws.model.Gallery[] attatchemts;
+
     public Post() {
     }
 
@@ -83,7 +85,8 @@ public class Post  implements java.io.Serializable {
            java.lang.String type,
            java.lang.String mimeType,
            int commentCount,
-           java.lang.String filter) {
+           java.lang.String filter,
+           com.bkahlert.wpws.model.Gallery[] attatchemts) {
            this.id = id;
            this.author = author;
            this.date = date;
@@ -108,6 +111,7 @@ public class Post  implements java.io.Serializable {
            this.mimeType = mimeType;
            this.commentCount = commentCount;
            this.filter = filter;
+           this.attatchemts = attatchemts;
     }
 
 
@@ -590,6 +594,26 @@ public class Post  implements java.io.Serializable {
         this.filter = filter;
     }
 
+
+    /**
+     * Gets the attatchemts value for this Post.
+     * 
+     * @return attatchemts
+     */
+    public com.bkahlert.wpws.model.Gallery[] getAttatchemts() {
+        return attatchemts;
+    }
+
+
+    /**
+     * Sets the attatchemts value for this Post.
+     * 
+     * @param attatchemts
+     */
+    public void setAttatchemts(com.bkahlert.wpws.model.Gallery[] attatchemts) {
+        this.attatchemts = attatchemts;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof Post)) return false;
@@ -665,7 +689,10 @@ public class Post  implements java.io.Serializable {
             this.commentCount == other.getCommentCount() &&
             ((this.filter==null && other.getFilter()==null) || 
              (this.filter!=null &&
-              this.filter.equals(other.getFilter())));
+              this.filter.equals(other.getFilter()))) &&
+            ((this.attatchemts==null && other.getAttatchemts()==null) || 
+             (this.attatchemts!=null &&
+              java.util.Arrays.equals(this.attatchemts, other.getAttatchemts())));
         __equalsCalc = null;
         return _equals;
     }
@@ -741,6 +768,17 @@ public class Post  implements java.io.Serializable {
         if (getFilter() != null) {
             _hashCode += getFilter().hashCode();
         }
+        if (getAttatchemts() != null) {
+            for (int i=0;
+                 i<java.lang.reflect.Array.getLength(getAttatchemts());
+                 i++) {
+                java.lang.Object obj = java.lang.reflect.Array.get(getAttatchemts(), i);
+                if (obj != null &&
+                    !obj.getClass().isArray()) {
+                    _hashCode += obj.hashCode();
+                }
+            }
+        }
         __hashCodeCalc = false;
         return _hashCode;
     }
@@ -766,13 +804,13 @@ public class Post  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("date");
         elemField.setXmlName(new javax.xml.namespace.QName("http://model.wpws.bkahlert.com", "date"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
         elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("dateGmt");
         elemField.setXmlName(new javax.xml.namespace.QName("http://model.wpws.bkahlert.com", "dateGmt"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
         elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
@@ -838,13 +876,13 @@ public class Post  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("modified");
         elemField.setXmlName(new javax.xml.namespace.QName("http://model.wpws.bkahlert.com", "modified"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
         elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("modifiedGmt");
         elemField.setXmlName(new javax.xml.namespace.QName("http://model.wpws.bkahlert.com", "modifiedGmt"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
         elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
@@ -894,6 +932,13 @@ public class Post  implements java.io.Serializable {
         elemField.setXmlName(new javax.xml.namespace.QName("http://model.wpws.bkahlert.com", "filter"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(true);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("attatchemts");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://model.wpws.bkahlert.com", "attatchemts"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://model.wpws.bkahlert.com", "Gallery"));
+        elemField.setNillable(true);
+        elemField.setItemQName(new javax.xml.namespace.QName("http://wpws.bkahlert.com", "item"));
         typeDesc.addFieldDesc(elemField);
     }
 

@@ -1,0 +1,119 @@
+@(posts: Array[_root_.com.bkahlert.wpws.model.Post], currentPage: Integer, pages: Integer)
+
+@tags = {
+	<meta name="keywords" content=""/>
+   	<meta name="description" content="Vasco Mouta home page">
+}
+
+@main("", "blog")(tags) {
+
+	<!--================= Header + Scroll navigation ================-->
+	@navigation_header(true){
+	   
+	}
+	<!--================= Section page title ================-->					
+     <section id="sec1" class="page-title-bg">
+         <div class="bg bg-parallax run-par" style="background-image: url(@routes.Assets.at("images/bg/blog.jpg")) "></div>
+         <div class="overlay over-op6"></div>
+         <div class="container">
+             <div class="content">
+                 <div class="page-title-bg-holder">
+                     <h2>@Messages("blog.title")</h2>
+                     <div class="clearfix"></div>
+                     <div class="separator flt-l color-separator"></div>
+                     <div class="clearfix"></div>
+                     <h4>@Messages("blog.subtitle")</h4>
+                 </div>
+             </div>
+         </div>
+     </section>
+	<!-- section end -->
+	
+	
+	<!--================= Section post's ================-->
+    <section class="align-text contact-container"  id="sec2">
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 display-posts">
+                    <!-- post-->
+                    @for(currentPost <- posts) {
+						<article class="post">
+                            <h4><a href="blog-single.html/@currentPost.getTitle()/" class="ajax transition2">@currentPost.getTitle()</a></h4>
+                            <ul class="post-meta">
+                                <li>02 Frb</li>
+                                <li>22 com</li>
+                                <li><i class="fa fa-heart-o"></i> 151</li>
+                                <li>
+                                    <h5>Posted by <a href="#"></a> @currentPost.getAuthor() / <a href="#">Standart</a></h5>
+                                </li>
+                            </ul>
+                            getContent -  @Html(currentPost.getContent())
+                         
+                            <p> getId - @currentPost.getId() </p>
+                            <p> getAuthor - @currentPost.getAuthor() </p>
+                            <p> getExcerpt - @currentPost.getExcerpt() </p>
+                            <p> getStatus - @currentPost.getStatus() </p>
+                            <p> getCommentStatus - @currentPost.getCommentStatus() </p>
+                            <p> getPingStatus - @currentPost.getPingStatus() </p>
+                            <p> getPassword - @currentPost.getPassword() </p>
+                            <p> getName - @currentPost.getName() </p>
+                            <p> getToPing - @currentPost.getToPing() </p>
+                            <p> getPinged - @currentPost.getPinged() </p>
+                            <p> getGuid - @currentPost.getGuid() </p>
+                            <p> getType - @currentPost.getType() </p>
+                            <p> getMimeType - @currentPost.getMimeType() </p>
+                            <p> getMenuOrder - @currentPost.getMenuOrder() </p>
+                            <p> getFilter - @currentPost.getFilter() </p>
+                            <p> getCommentCount - @currentPost.getCommentCount() </p>
+                            <p> getParentId - @currentPost.getParentId() </p>
+                            <p> getContentFiltered - @currentPost.getContentFiltered() </p>
+                            <p> getAttatchemts - </p>
+ 
+                            @if(currentPost.getAttatchemts() != null){
+                            	@for(i <- 0 until currentPost.getAttatchemts().length) {
+                            		
+	                            	
+		                            <p> b************* </p>
+	                            }
+                            	<p> ************* </p>
+							}
+							
+                            <a href="blog-single.html" class="ajax post-link">Continue reading ...</a>
+                            <ul class="post-tags">
+                                <li><a href="#">Design</a></li>
+                                <li><a href="#">Video</a></li>
+                                <li><a href="#">Photo</a></li>
+                            </ul>
+                        </article>  
+					}        
+					<!-- pagination-->
+					@if(pages>1) {
+						<div class="pagination">
+							<a href="#" class="prevposts-link transition"><i class="fa fa-chevron-left"></i></a>
+		                    @for(index <- 0 until pages) {
+		    	                @if(index==currentPage) {
+								  <a href="#" class="blog-page current-page transition">index</a>
+								} else {
+								  <a href="#" class="blog-page transition">index</a>
+								}
+							}
+	                        <a href="#" class="nextposts-link transition"><i class="fa fa-chevron-right"></i></a>
+	                     </div>
+					}
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+	<!-- section end -->
+	<!--================= Section hireme  ================-->
+	@share()
+	<!-- section end -->
+	<!--================= Section hireme  ================-->
+	@hireme()
+	<!-- section end -->
+	<!--================= Section widgets  ================-->
+    @widgets()
+    <!-- section end -->
+}

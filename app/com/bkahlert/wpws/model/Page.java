@@ -35,7 +35,8 @@ public class Page  extends com.bkahlert.wpws.model.Post  implements java.io.Seri
            java.lang.String type,
            java.lang.String mimeType,
            int commentCount,
-           java.lang.String filter) {
+           java.lang.String filter,
+           com.bkahlert.wpws.model.Gallery[] attatchemts) {
         super(
             id,
             author,
@@ -60,7 +61,8 @@ public class Page  extends com.bkahlert.wpws.model.Post  implements java.io.Seri
             type,
             mimeType,
             commentCount,
-            filter);
+            filter,
+            attatchemts);
     }
 
     private java.lang.Object __equalsCalc = null;
