@@ -9,7 +9,7 @@
 
 	<!--================= Header + Scroll navigation ================-->
 	@navigation_header(true) {
-		<li class="actscroll"><a class="scroll-link" href="#sec1">Works </a></li>
+		<li class="actscroll"><a class="scroll-link" href="#sec1">@Messages("portfolio.works")</a></li>
 		<li><a class="scroll-link" href="#sec2">Services</a></li>
 	}
 	<!-- End header -->
@@ -20,11 +20,11 @@
 	    <div class="container">
 	        <div class="content">
 	            <div class="page-title-bg-holder">
-	                <h2>My Portfolio</h2>
+	                <h2>@Messages("portfolio.title")</h2>
 	                <div class="clearfix"></div>
-	                <h4> Collection of most products I was involved and services </h4>
+	                <h4>@Messages("portfolio.subtitle")</h4>
 	                <div class="clearfix"></div>
-	                <a href="#sec1" class="btn flt-l   trans-btn custom-scroll-link  transition">Let's View</a>
+	                <a href="#sec1" class="btn flt-l   trans-btn custom-scroll-link  transition">@Messages("portfolio.view")</a>
 	            </div>
 	        </div>
 	    </div>
@@ -36,9 +36,9 @@
 	             <div class="container">
 	                 <div class="row">
 	                     <div class="col-lg-10">
-							 <div class="filter-button">Filters <i class="fa fa-angle-double-down"></i></div>
+							 <div class="filter-button">@Messages("portfolio.filters")<i class="fa fa-angle-double-down"></i></div>
 	                         <div class="masonry-filters">
-	                             <a href="#" class="masonry-filter masonry-filter_active  transition allval"  data-filter="*">View All <span class="num-pr numpr-all"></span></a>		
+	                             <a href="#" class="masonry-filter masonry-filter_active  transition allval"  data-filter="*">@Messages("portfolio.viewall")<span class="num-pr numpr-all"></span></a>		
 	                             <a href="#" class="masonry-filter transition" data-filter=".ios">iOS <span class="num-pr num-cat"></span></a>
 	                             <a href="#" class="masonry-filter transition" data-filter=".android">Android <span class="num-pr num-cat"></span></a>
 	                             <a href="#" class="masonry-filter transition" data-filter=".symbian">Symbian <span class="num-pr num-cat"></span></a>

@@ -8,9 +8,9 @@
 @main("Vasco Mouta - Resume", "resume")(tags) {
     <!--================= Header + Scroll navigation ================-->
     @navigation_header(true) {
-    	<li class="actscroll"><a class="scroll-link" href="#sec1">Works </a></li>
-        <li><a class="scroll-link" href="#sec2">Resume</a></li>
-        <li><a class="scroll-link" href="#sec3">Skills</a></li>
+    	<li class="actscroll"><a class="scroll-link" href="#sec1">@Messages("resume.works")</a></li>
+        <li><a class="scroll-link" href="#sec2">@Messages("resume.resume")</a></li>
+        <li><a class="scroll-link" href="#sec3">@Messages("resume.skills")</a></li>
     }
 	<!--================= Section page title ================-->	
 	<section  class="page-title-bg">
@@ -19,11 +19,11 @@
 	    <div class="container">
 	        <div class="content">
 	            <div class="page-title-bg-holder">
-	                <h2>My Resume</h2>
+	                <h2>@Messages("resume.title")</h2>
 	                <div class="clearfix"></div>
-	                <h4>Find work history, education background, personal skills and areas of interest</h4>
+	                <h4>@Messages("resume.subtitle")</h4>
 	                <div class="clearfix"></div>
-	                <a href="contact.html" class="btn flt-l   trans-btn custom-scroll-link  transition">  Hire me</a>
+	                <a href="contact.html" class="btn flt-l   trans-btn custom-scroll-link  transition">@Messages("resume.hireme")</a>
 	            </div>
 	        </div>
 	    </div>
@@ -33,11 +33,11 @@
 	<section class="fetworks" id="sec1">
 	    <div class="container">
 	        <div class="section-title">
-	            <h2>Some of my works</h2>
+	            <h2>@Messages("resume.somework")</h2>
 	            <div class="separator"></div>
 	            <div class="clearfix"></div>
-	            <p>My latest works.</p>
-	            <a href="portfolio.html" class="btn   clr-btn  ajax     transition">View all works</a>
+	            <p>@Messages("resume.latestworks")</p>
+	            <a href="portfolio.html" class="btn   clr-btn  ajax     transition">@Messages("resume.allworks")</a>
 	        </div>
 	    </div>
 	    <div class="columns-holder">

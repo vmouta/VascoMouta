@@ -30,6 +30,7 @@ GET		/$lang<[a-z]{2}>/portfolio/zeerio.html				controllers.Portfolio.zeerio(lang
 GET     /$lang<[a-z]{2}>/*path			controllers.Application.routerI18n(lang: String, path: String)
 GET     /$lang<[a-z]{2}-[^/]+>/*path	controllers.Application.routerI18n(lang: String, path: String)
 
+GET		/updatelanguage					controllers.Application.updateLang(lang: String)
 GET     /signature.html             	controllers.Assets.at(path="/public", file="signature.html")
 GET     /vasco_signature.html       	controllers.Assets.at(path="/public", file="signature.html")
 

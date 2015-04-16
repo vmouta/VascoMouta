@@ -17,28 +17,28 @@
             <!-- level 1 -->
             <ul>
                 <li>
-                    <a href="/@{lang().code()}/home.html" class="@if(tab.equals("home")) {active} no-vismen ajax">Home </a>
+                    <a href="/@{lang().code()}/home.html" class="@if(tab.equals("home")) {active} no-vismen ajax">@Messages("navigation.home")</a>
                 </li>
                 <li>
-                    <a href="/@{lang().code()}/portfolio.html" class="@if(tab.equals("portfolio")) {active} no-vismen ajax">  Portfolio </a>
+                    <a href="/@{lang().code()}/portfolio.html" class="@if(tab.equals("portfolio")) {active} no-vismen ajax">@Messages("navigation.portfolio")</a>
                 </li>
                 <li>
-                    <a href="/@{lang().code()}/resume.html" class="@if(tab.equals("resume")) {active} no-vismen ajax">  Resume </a>
+                    <a href="/@{lang().code()}/resume.html" class="@if(tab.equals("resume")) {active} no-vismen ajax">@Messages("navigation.resume")</a>
                 </li>
                 <li>
-                    <a href="/@{lang().code()}/blog.html" class="@if(tab.equals("blog")) {active} no-vismen ajax">  Blog </a>
+                    <a href="/@{lang().code()}/blog.html" class="@if(tab.equals("blog")) {active} no-vismen ajax">@Messages("navigation.blog")</a>
                 </li>
                 <li>
-                    <a href="/@{lang().code()}/contact.html" class="@if(tab.equals("contact")) {active} no-vismen ajax">  Contact</a>
+                    <a href="/@{lang().code()}/contact.html" class="@if(tab.equals("contact")) {active} no-vismen ajax">@Messages("navigation.contact")</a>
                 </li>
                 <li>
-                    <a href="#" class="no-vismen"> <i class="fa fa-caret-right transition"></i> Language </a>
+                    <a href="#" class="no-vismen"> <i class="fa fa-caret-right transition"></i>@Messages("navigation.language")</a>
                     <!-- level 2 -->
                     <ul>
                         <li>
-                            <a href="#"> <i class="no-vismen active ajax"></i> @if(lang().code().equals("en")) {*} English </a>
-                            <a href="#"> <i class="no-vismen active ajax"></i> @if(lang().code().equals("pt")) {*} Portuguese </a>
-                            <a href="#"> <i class="no-vismen active ajax"></i> @if(lang().code().equals("de")) {*} German </a>
+                            <a href="@routes.Application.updateLang("en")"> <i class="no-vismen active ajax"></i> @if(lang().code().equals("en")) {*} @Messages("navigation.language.english") </a>
+                            <a href="@routes.Application.updateLang("pt")"> <i class="no-vismen active ajax"></i> @if(lang().code().equals("pt")) {*} @Messages("navigation.languag.portuguese") </a>
+                            <a href="@routes.Application.updateLang("de")"> <i class="no-vismen active ajax"></i> @if(lang().code().equals("de")) {*} @Messages("navigation.language.german") </a>
                         </li>
                     </ul>
                 </li>

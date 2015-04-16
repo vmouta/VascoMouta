@@ -15,6 +15,10 @@ public class Application extends AppController {
 		return indexI18n(lang().code());
 	}
 	
+	public static Result updateLang(String lang) {
+		return redirect("/"+ lang + "/home.html");
+	}
+	
 	public static Result index() {
         return i18nRedirect("");
     }
