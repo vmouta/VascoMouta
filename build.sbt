@@ -11,6 +11,8 @@ libraryDependencies ++= Seq(
   cache,
   filters,
   javaWs,
+  "org.apache.axis" % "axis-jaxrpc" % "1.4",
+  "org.apache.axis" % "axis" % "1.4",
   "org.webjars" %% "webjars-play" % "2.4.0-M3-1-SNAPSHOT",
   "org.webjars" % "bootstrap" % "3.3.4",
   "org.webjars" % "jquery" % "2.1.3",
