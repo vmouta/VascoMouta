@@ -1,0 +1,409 @@
+@(company: Integer)
+
+@tags = {
+	<meta name="keywords" content="Resume, CV"/>
+    <meta name="description" content="Vasco Mouta - Resume">
+}
+
+@main("Vasco Mouta - Resume", "resume")(tags) {
+    <!--================= Header + Scroll navigation ================-->
+    @navigation_header(true) {
+        <li class="actscroll"><a class="scroll-link" href="#sec1">@Messages("resume.resume")</a></li>
+        <li><a class="scroll-link" href="#sec2">@Messages("resume.skills")</a></li>
+        <li><a class="scroll-link" href="#sec3">@Messages("resume.works")</a></li>
+    }
+	<!--================= Section page title ================-->	
+	<section  class="page-title-bg">
+	    <div class="bg bg-parallax run-par" style="background-image: url(@routes.Assets.at("images/bg/resume.jpg")) "></div>
+	    <div class="overlay over-op6"></div>
+	    <div class="container">
+	        <div class="content">
+	            <div class="page-title-bg-holder">
+	                <h2>@Messages("resume.title")</h2>
+	                <div class="clearfix"></div>
+	                <h4>@Messages("resume.subtitle")</h4>
+	                <div class="clearfix"></div>
+	                <a href="contact.html" class="btn flt-l   trans-btn custom-scroll-link  transition">@Messages("resume.hireme")</a>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+	<!-- section end -->
+	<!--================= Section resume style 1  ================-->
+	<section class="gray-section"  id="sec1">
+	    <div class="content">
+	        <div class="container ">
+	            <div class="section-title">
+	                <h2>Resume</h2>
+	                <span class="separator"></span>
+	                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+	            </div>
+	            <div class="resume-alt">
+	                <!-- copy code  -->
+	                <div class="accordion" data-name="@company">
+	                	<div class="accordion-title transition">
+	                        <h5><a href="#"> <i class="fa fa-pencil"></i> 2015 <span> - Diploma In Digital Marketing, Shaw Academy</span></a></h5>
+	                    </div>
+	                    <div class="accordion-inner">
+	                        <h4>Student</h4>
+	                        <ul>
+	                            <li>SEO</li>
+	                            <li>Analytics</li>
+	                            <li>PPC</li>
+	                            <li>Reputation</li>
+	                            <li>Affiliate Marketing</li>
+	                            <li>E-commerce</li>
+	                        </ul>
+	                        <div class="row">
+		                        <div class="company-image col-md-2">
+			                        <a href="http://www.shawacademy.com/" target="_blank" class="transition"><img src="/images/companies/shaw.jpg"  class="respimg" alt=""></img></a>
+			                    </div>
+			                    <div class="col-md-10">
+			                        <p>About acquiring clients for less, converting greater numbers of leads into profitable customers, and increasing market share in a highly competitive, exponentially growing and lucrative, online market place.</p>
+			                    </div>
+			                </div> 
+	                    </div>
+	                    <div class="accordion-title transition">
+	                        <h5><a href="#"> <i class="fa fa-briefcase"></i> 2013-2015 <span> - Work in company "Ayon GmbH"</span></a></h5>
+	                    </div>
+	                    <div class="accordion-inner">
+	                        <h4>Mobile Engineer</h4>
+	                        <ul>
+	                            <li>iOS Development</li>
+	                            <li>Android Development</li>
+	                        </ul>
+	                        <div class="row no-padding">
+		                        <div class="company-image col-md-2">
+		                        	<a href="http://ayon.ch" target="_blank" class="transition"><img src="/images/companies/ayon.jpg"  class="respimg" alt=""></img></a>
+			                    </div>
+			                    <div class="col-md-10">
+			                        <p>Responsible for full implementation of native iOS and Android group of “adverts catalogue and publisher” applications (boat24.com, boat24.ch, caravan24.ch). The applications are highly customizable (Resources, Form views, Settings, etc) from a server as management the management of user accounts. RSA encryption for security sensitive data and highly reusable/portable code.</p>
+			                    </div>
+			                </div> 
+	                    </div>
+	                    <div class="accordion-title transition">
+	                        <h5><a href="#"> <i class="fa fa-briefcase"></i> 2012-2013 <span> - Work in company "Localina GmbH"</span></a></h5>
+	                    </div>
+	                    <div class="accordion-inner">
+	                        <h4>CTO & Co-Founder</h4>
+	                        <ul>
+	                            <li>Project Manager</li>
+	                            <li>Backend Developer</li>
+	                            <li>iOS Developer</li>
+	                        </ul>
+	                        <div class="row no-padding">
+		                        <div class="company-image col-md-2">
+			                        <a href="http://localina.ch" target="_blank" class="transition"><img src="/images/companies/localina.png"  class="respimg" alt=""></img></a>
+			                    </div>
+			                    <div class="col-md-10">
+			                        <p>Localina AG was a tech startup that developed and marketed an innovative multi platform reservation management solution for restaurants and other small businesses. As co-founded Localina AG and CTO, I was responsible for product development including development strategy, server, mobile solution and integration API’s in a 5 person development team plus near shore development. In June 2012 we sold Localina AG to local.ch in an extremely successfully
+exit point.</p>
+			                    </div>
+			                </div> 
+	                    </div>
+	                    <div class="accordion-title transition">
+	                        <h5><a href="#"> <i class="fa fa-briefcase"></i> 2006-2011 <span> - Work in company "connvision GmbH"</span></a></h5>
+	                    </div>
+	                    <div class="accordion-inner">
+	                        <h4>Mobile Engineer</h4>
+	                        <ul>
+	                            <li>Project Manager</li>
+	                            <li>Backend Developer</li>
+	                            <li>iOS Developer</li>
+	                        </ul>
+	                        <div class="row no-padding">
+		                        <div class="company-image col-md-2">
+			                        <a href="http://connvision.ch" target="_blank" class="transition"><img src="/images/companies/connvision.jpg"  class="respimg" alt=""></img></a>
+			                    </div>
+			                    <div class="col-md-10">
+			                        <p>Back in 2006 I started as Symbian mobile developer for the company product BeeTagg Reader, later on as a cross platform I also became responsible for other platforms (J2ME, Palm, Android, iOS, Blackberry, Brew) as for cross platform components in AnsiC and Java. As cross-platform development grows into our main competence I start to design/manage mobile cross platform application (External Projects and Company Products).</p>
+			                    </div>
+			                </div> 
+	                    </div>
+	                    <div class="accordion-title transition">
+	                        <h5><a href="#"> <i class="fa fa-briefcase"></i> 2005-2006 <span> - Work in company "Surfkitchen GmbH"</span></a></h5>
+	                    </div>
+	                    <div class="accordion-inner">
+	                        <h4>Mobile Engineer</h4>
+	                        <ul>
+	                            <li>Project Manager</li>
+	                            <li>Backend Developer</li>
+	                            <li>iOS Developer</li>
+	                        </ul>
+	                        <div class="row no-padding">
+		                        <div class="company-image col-md-2">
+			                        <a href="http://www.businesswire.com/news/home/20110208006036/en/Teleca-Acquires-UK-Based-SurfKitchen-Adds-Mobile#.VS1TqBOUcz4" target="_blank" class="transition"><img src="/images/companies/surfkitchen.jpg"  class="respimg" alt=""></img></a>
+			                    </div>
+			                    <div class="col-md-10">
+			                        <p>Maintenance, documenting, bug fixing/refactoring a C++ application for mobile phones (Symbian OS). The application is a Virtual Machine (Engine) that’s permit develop strong mobile phones application with the combination between JavaScript and a XML language based, using this “engine” to interpret it. The application including also a system for synchronization between the phone and a server that permits update the JavaScript/XML files in real-time (ex: can be used to change the user interface or the content of the user interface).</p>
+			                    </div>
+			                </div> 
+	                    </div>
+	                    <div class="accordion-title transition">
+	                        <h5><a href="#"> <i class="fa fa-briefcase"></i> 2004-2005 <span> - Work in company "Critical Software"</span></a></h5>
+	                    </div>
+	                    <div class="accordion-inner">
+	                        <h4>Software Engineer</h4>
+	                        <ul>
+	                            <li>Project Manager</li>
+	                            <li>Backend Developer</li>
+	                            <li>iOS Developer</li>
+	                        </ul>
+	                        <div class="row no-padding">
+		                        <div class="company-image col-md-2">
+			                        <a href="http://www.criticalsoftware.pt" target="_blank" class="transition"><img src="/images/companies/critical.jpg"  class="respimg" alt=""></img></a>
+			                    </div>
+			                    <div class="col-md-10">
+			                        <p>Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+			                    </div>
+			                </div> 
+	                    </div>
+	                    <div class="accordion-title transition">
+	                        <h5><a href="#"> <i class="fa fa-briefcase"></i> 2003-2004 <span> - Work in company "Oy Net Zeerio Solutions Ab" and "Oy Flander"</span></a></h5>
+	                    </div>
+	                    <div class="accordion-inner">
+	                        <h4>Mobile Engineer</h4>
+	                        <ul>
+	                            <li>Project Manager</li>
+	                            <li>Backend Developer</li>
+	                            <li>iOS Developer</li>
+	                        </ul>
+	                        <div class="row no-padding">
+		                        <div class="company-image col-md-2">
+			                        <a href="http://www.flander.com" target="_blank" class="transition"><img src="/images/companies/flander.jpg"  class="respimg" alt=""></img></a>
+			                    </div>
+			                    <div class="col-md-10">
+			                        <p>Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+			                    </div>
+			                </div> 
+	                    </div>
+	                    <div class="accordion-title transition">
+	                        <h5><a href="#"> <i class="fa fa-graduation-cap"></i> 2000-2003 <span> - University studies Coimbra</span></a></h5>
+	                    </div>
+	                    <div class="accordion-inner">
+	                        <h4>Student</h4>
+	                        <ul>
+	                            <li>Dancing</li>
+	                            <li>Drinking</li>
+	                            <li>Working</li>
+	                            <li>and some studies :)</li>
+	                        </ul>
+	                        <div class="row no-padding">
+		                        <div class="company-image col-md-2">
+			                        <a href="http://www.isec.pt" target="_blank" class="transition"><img src="/images/companies/isec.jpg"  class="respimg" alt=""></img></a>
+			                    </div>
+			                    <div class="col-md-10">
+			                        <p>- Program to change messengers between register users, across one server (chat client).
+- Artificial Intelligence System to determinate the best path to a mail-man.
+- Artificial Intelligence Program to determinate the max of a complex function without calculating all the possible values based in Hill Climbing and Simulated Annealing Algorithms.
+- A shared data base and user interface to a group of institute of beauty.</p>
+			                    </div>
+			                </div> 
+	                    </div>
+	                </div>
+	                <a href="#" class="btn flt-l   clr-btn anim-button       transition"><span>Download resume</span><i class="fa fa-download"></i></a>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+	<!-- section end -->
+	<!--================= Section inline skills  ================-->
+	<section>
+	    <div class="content"  id="sec2">
+	        <div class="container ">
+	            <div class="section-title">
+	                <h2>My skills</h2>
+	                <span class="separator"></span>
+	                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+	            </div>
+	            <div class="row">
+	                <div class="col-md-6 ">
+	                    <div class="custom-skillbar-holder">
+	                        <div class="skillbar-box animaper">
+	                            <!-- skill 1-->
+	                            <div class="custom-skillbar-title"><span>C, C++, Objective C</span></div>
+	                            <div class="skill-bar-percent">95%</div>
+	                            <div class="skillbar-bg" data-percent="95%">
+	                                <div class="custom-skillbar"></div>
+	                            </div>
+	                            <!-- skill 2-->
+	                            <div class="custom-skillbar-title"><span>Java</span></div>
+	                            <div class="skill-bar-percent">90%</div>
+	                            <div class="skillbar-bg" data-percent="90%">
+	                                <div class="custom-skillbar"></div>
+	                            </div>
+	                            <!-- skill 3-->
+	                            <div class="custom-skillbar-title"><span>PHP</span></div>
+	                            <div class="skill-bar-percent">60%</div>
+	                            <div class="skillbar-bg" data-percent="60%">
+	                                <div class="custom-skillbar"></div>
+	                            </div>
+	                            <!-- skill 4-->
+	                            <div class="custom-skillbar-title"><span>Scripting (Python, Shell, JavaScript)</span></div>
+	                            <div class="skill-bar-percent">52%</div>
+	                            <div class="skillbar-bg" data-percent="52%">
+	                                <div class="custom-skillbar"></div>
+	                            </div>
+	                            <!-- skill 5-->
+	                            <div class="custom-skillbar-title"><span>Swift</span></div>
+	                            <div class="skill-bar-percent">25%</div>
+	                            <div class="skillbar-bg" data-percent="25%">
+	                                <div class="custom-skillbar"></div>
+	                            </div>
+	                            <!-- skill 6-->
+	                            <div class="custom-skillbar-title"><span>HTML5, Bootstrap, Less, coffeeScript, Css</span></div>
+	                            <div class="skill-bar-percent">48%</div>
+	                            <div class="skillbar-bg" data-percent="48%">
+	                                <div class="custom-skillbar"></div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="col-md-6 ">
+	                    <div class="custom-skillbar-holder">
+	                        <div class="skillbar-box animaper">
+	                            <!-- skill 1-->
+	                            <div class="custom-skillbar-title"><span>Application Servers (Play Framework, JBoss, WebSphere)</span></div>
+	                            <div class="skill-bar-percent">50%</div>
+	                            <div class="skillbar-bg" data-percent="50%">
+	                                <div class="custom-skillbar"></div>
+	                            </div>
+	                            <!-- skill 2-->
+	                            <div class="custom-skillbar-title"><span>Eclipse, XCode, Android Studio</span></div>
+	                            <div class="skill-bar-percent">85%</div>
+	                            <div class="skillbar-bg" data-percent="85%">
+	                                <div class="custom-skillbar"></div>
+	                            </div>
+	                            <!-- skill 3-->
+	                            <div class="custom-skillbar-title"><span>MySql, SQLite, Oracle, ProsSQL</span></div>
+	                            <div class="skill-bar-percent">78%</div>
+	                            <div class="skillbar-bg" data-percent="78%">
+	                                <div class="custom-skillbar"></div>
+	                            </div>
+	                            <!-- skill 4-->
+	                            <div class="custom-skillbar-title"><span>Agile (Scrums, Kanban)</span></div>
+	                            <div class="skill-bar-percent">83%</div>
+	                            <div class="skillbar-bg" data-percent="83%">
+	                                <div class="custom-skillbar"></div>
+	                            </div>
+	                            <!-- skill 5-->
+	                            <div class="custom-skillbar-title"><span>Management - small teams</span></div>
+	                            <div class="skill-bar-percent">70%</div>
+	                            <div class="skillbar-bg" data-percent="70%">
+	                                <div class="custom-skillbar"></div>
+	                            </div>
+	                            <!-- skill 6-->
+	                            <div class="custom-skillbar-title"><span>Java</span></div>
+	                            <div class="skill-bar-percent">17%</div>
+	                            <div class="skillbar-bg" data-percent="17%">
+	                                <div class="custom-skillbar"></div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+	<!-- section end -->
+		<!--================= Section some works style 2  ================-->
+	<section class="fetworks" id="sec3">
+	    <div class="container">
+	        <div class="section-title">
+	            <h2>@Messages("resume.somework")</h2>
+	            <div class="separator"></div>
+	            <div class="clearfix"></div>
+	            <p>@Messages("resume.latestworks")</p>
+	            <a href="portfolio.html" class="btn   clr-btn  ajax     transition">@Messages("resume.allworks")</a>
+	        </div>
+	    </div>
+	    <div class="columns-holder">
+	        <div class="left-column column gray-section no-padding align-holder">
+	            <div class="customNavigation blc-nav">
+	                <a class="next-slide transition"><i class="fa fa-angle-right"></i><span class="transition2"></span></a>
+	                <a class="prev-slide transition"><i class="fa fa-angle-left"></i><span class="transition2"></span></a>
+	            </div>
+	            <div class="sync-carousel-info-holder align-cnt">
+	                <div  id="sync-carousel-info" class="owl-carousel">
+	                    <div class="item">
+	                        <div class="content">
+	                            <div class="container">
+	                                <div class="row align-text">
+	                                    <div class="col-md-12">
+	                                        <div class="sync-info">
+	                                            <h3>Boat24.com</h3>
+	                                            <div class="clearfix"></div>
+	                                            <h4>Mobile Engineer</h4>
+		                                        <p>Full implement native iOS and Android “adverts catalogue” applications. An highly customizable (Resources, Form views, Settings, etc) application from the server with RSA encryption for security sensitive data.</p>
+	                                            <div class="clearfix"></div>
+	                                            <a href="/@{lang().code()}/portfolio/boat24.html" class="ajax btn clr-btn anim-button  transition"><span>More details</span><i class="fa fa-external-link"></i></a>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="item">
+	                        <div class="content">
+	                            <div class="container">
+	                                <div class="row align-text">
+	                                    <div class="col-md-12">
+	                                        <div class="sync-info">
+	                                            <h3>Localina</h3>
+	                                            <div class="clearfix"></div>
+	                                            <h4>CTO & Co-Founder</h4>
+	                                            <p>Localina is a simple electronic reservation book for the iPad. Reservations can be acquired quickly and easily, the booking status in the restaurant is always up to date to read and guest data. Receive online reservations on local.ch, via your own website and on Facebook.</p>
+	                                            <div class="clearfix"></div>
+	                                            <a href="/@{lang().code()}/portfolio/localina.html" class="ajax btn clr-btn anim-button  transition"><span>More details</span><i class="fa fa-external-link"></i></a>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="item">
+	                        <div class="content">
+	                            <div class="container">
+	                                <div class="row align-text">
+	                                    <div class="col-md-12">
+	                                        <div class="sync-info">
+	                                            <h3>connvision AG</h3>
+	                                            <div class="clearfix"></div>
+	                                            <h4>Mobile Engineer</h4>
+	                                            <p>1D and 2D barcod reader. BeeTagg Code, QR Code, Datamatrix, EAN-13 / UPC-A. Native implementation for iOS, Android, Symbian, BlackBerry, Bada, PalmOS, Brew, J2ME, ...</p>
+	                                            <div class="clearfix"></div>
+	                                            <a href="/@{lang().code()}/portfolio/beetagg.html" class="ajax btn clr-btn anim-button  transition"><span>More details</span><i class="fa fa-external-link"></i></a>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="right-column column    no-padding">
+	            <div class="sync-carousel-image-holder">
+	                <div id="sync-carousel-image" class="owl-carousel">
+	                    <div class="item"> 
+	                        <img src="@routes.Assets.at("images/folio/boat24.png")" alt="" class="respimg">
+	                    </div>
+	                    <div class="item">
+	                        <img src="@routes.Assets.at("images/folio/localina.png")" alt="" class="respimg">
+	                    </div>
+	                    <div class="item">
+	                        <img src="@routes.Assets.at("images/folio/beetagg.png")" alt="" class="respimg">
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+	<!-- section end -->
+	<!--================= Section hireme  ================-->
+	@hireme()
+	<!-- section end -->
+	<!--================= Section widgets  ================-->
+    @widgets()
+    <!-- section end -->
+}
