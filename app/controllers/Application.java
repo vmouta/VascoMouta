@@ -53,9 +53,9 @@ public class Application extends AppController {
         return ok(portfolio.render());
     }
     
-    public static Result resume(String lang) {
+    public static Result resume(String lang, int company) {
     	if(needLanguageRedirect(lang)) return redirect("/"+ lang().code() + "/resume.html");
-        return ok(resume.render());
+        return ok(resume.render(company));
     }
     
     public static Result contact(String lang) {

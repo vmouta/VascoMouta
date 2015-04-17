@@ -112,7 +112,9 @@ public class Post {
     
     public String getText() {
     	String content = wordpressPost.getContent();
-    	return (content!=null?content.replaceAll("(?s)<a[^>]*>.*?</a>", ""):"");
+    	if(content != null) content = content.replaceAll("(?s)<img[^>]*>.*?</img>", "");
+    	if(content != null) content = content.replaceAll("(?s)<img[^>]*/>", "");
+    	return (content!=null?content.replaceAll("(?s)<img[^>]*>", ""):"");
     }
     
     public String getTextShort() {

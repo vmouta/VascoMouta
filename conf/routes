@@ -10,7 +10,7 @@ GET     /$lang<[a-z]{2}>/home.html			controllers.Application.home(lang: String)
 GET     /$lang<[a-z]{2}-[^/]+>/home.html	controllers.Application.home(lang: String)
 
 GET     /$lang<[a-z]{2}>/portfolio.html     controllers.Application.protfolio(lang: String)
-GET     /$lang<[a-z]{2}>/resume.html        controllers.Application.resume(lang: String)
+GET     /$lang<[a-z]{2}>/resume.html        controllers.Application.resume(lang: String, company:Int ?= 1)
 GET     /$lang<[a-z]{2}>/contact.html       controllers.Application.contact(lang: String)
 
 GET     /$lang<[a-z]{2}>/blog.html          controllers.Blog.blog(lang: String, page:Int ?= 1)
