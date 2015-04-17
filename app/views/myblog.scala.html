@@ -1,11 +1,11 @@
-@(posts: Array[_root_.com.bkahlert.wpws.model.Post], currentPage: Integer, pages: Integer)
+@(title: String, posts: List[models.Post], currentPage: Integer, pages: Integer)
 
 @tags = {
 	<meta name="keywords" content=""/>
    	<meta name="description" content="Vasco Mouta home page">
 }
 
-@main("", "blog")(tags) {
+@main(title, "blog")(tags) {
 
 	<!--================= Header + Scroll navigation ================-->
 	@navigation_header(true){
@@ -28,8 +28,6 @@
          </div>
      </section>
 	<!-- section end -->
-	
-	
 	<!--================= Section post's ================-->
     <section class="align-text contact-container"  id="sec2">
         <div class="content">
@@ -38,67 +36,86 @@
                     <div class="col-md-8 display-posts">
                     <!-- post-->
                     @for(currentPost <- posts) {
-						<article class="post">
-                            <h4><a href="blog-single.html/@currentPost.getTitle()/" class="ajax transition2">@currentPost.getTitle()</a></h4>
+                    
+                    	<article class="post">
+                            <h4><a href="/@{lang().code()}/post@{currentPost.getRelativeUrl()}" class="ajax transition2">@currentPost.getTitle()</a></h4>
                             <ul class="post-meta">
-                                <li>02 Frb</li>
-                                <li>22 com</li>
+                                <li>@currentPost.getDateString()</li>
+                                <li>@currentPost.getNumComments() com</li>
                                 <li><i class="fa fa-heart-o"></i> 151</li>
                                 <li>
-                                    <h5>Posted by <a href="#"></a> @currentPost.getAuthor() / <a href="#">Standart</a></h5>
+                                    <h5>Posted by @currentPost.getAuthor()</h5>
                                 </li>
                             </ul>
-                            getContent -  @Html(currentPost.getContent())
-                         
-                            <p> getId - @currentPost.getId() </p>
-                            <p> getAuthor - @currentPost.getAuthor() </p>
-                            <p> getExcerpt - @currentPost.getExcerpt() </p>
-                            <p> getStatus - @currentPost.getStatus() </p>
-                            <p> getCommentStatus - @currentPost.getCommentStatus() </p>
-                            <p> getPingStatus - @currentPost.getPingStatus() </p>
-                            <p> getPassword - @currentPost.getPassword() </p>
-                            <p> getName - @currentPost.getName() </p>
-                            <p> getToPing - @currentPost.getToPing() </p>
-                            <p> getPinged - @currentPost.getPinged() </p>
-                            <p> getGuid - @currentPost.getGuid() </p>
-                            <p> getType - @currentPost.getType() </p>
-                            <p> getMimeType - @currentPost.getMimeType() </p>
-                            <p> getMenuOrder - @currentPost.getMenuOrder() </p>
-                            <p> getFilter - @currentPost.getFilter() </p>
-                            <p> getCommentCount - @currentPost.getCommentCount() </p>
-                            <p> getParentId - @currentPost.getParentId() </p>
-                            <p> getContentFiltered - @currentPost.getContentFiltered() </p>
-                            <p> getAttatchemts - </p>
- 
-                            @if(currentPost.getAttatchemts() != null){
-                            	@for(i <- 0 until currentPost.getAttatchemts().length) {
-                            		
-	                            	
-		                            <p> b************* </p>
-	                            }
-                            	<p> ************* </p>
-							}
-							
-                            <a href="blog-single.html" class="ajax post-link">Continue reading ...</a>
+                            @if(currentPost.getImagesCount() > 1){
+                            	<div class="post-media">
+                                    <div class="custom-slider-holder">
+                                        <div class="customNavigation">
+                                            <a class="prev-slide transition"><i class="fa fa-chevron-left"></i></a>
+                                            <a class="next-slide transition"><i class="fa fa-chevron-right"></i></a>
+                                        </div>
+                                        <div  class="custom-slider owl-carousel   popup-gallery">
+                                        
+ 	                                       @for(i <- 0 to currentPost.getImagesCount()-1) {
+	                                            <!--  Black Overlay -->
+	                                            <div class="item">
+	                                                <div class="box-item-holder">
+	                                                    <div class="box-item bl-over">
+	                                                        <div class="box-item-med">
+	                                                            <img src="@currentPost.imageUrl(i,"600", "400")" alt="" class="respimg">
+	                                                            <div class="overlay"></div>
+	                                                        </div>
+	                                                        <div class="box-links">
+	                                                            <a href="@currentPost.imageUrl(i,"600", "400")" class="lin-h"><i class="fa fa-plus"></i></a>
+	                                                        </div>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+	                                       }
+                                        </div>
+                                    </div>
+                                </div>
+	                        }
+	                        
+	                        @if(currentPost.getImagesCount() == 1){
+	                            <div class="post-media">
+                                   <a href="@currentPost.imageUrl(0,"600", "400")" class="ajax"><img src="@currentPost.imageUrl(0,"600", "400")" alt="" class="respimg"></a>											
+                                </div>
+
+	                        }
+	                        
+                            <p>@currentPost.getTextShort()</p>
+                            <a href="/@{lang().code()}/post@{currentPost.getRelativeUrl()}" class="ajax post-link">@Messages("blog.continue")</a>
                             <ul class="post-tags">
                                 <li><a href="#">Design</a></li>
                                 <li><a href="#">Video</a></li>
                                 <li><a href="#">Photo</a></li>
                             </ul>
-                        </article>  
+                        </article>
 					}        
 					<!-- pagination-->
 					@if(pages>1) {
 						<div class="pagination">
-							<a href="#" class="prevposts-link transition"><i class="fa fa-chevron-left"></i></a>
-		                    @for(index <- 0 until pages) {
+							@if(currentPage==1) {
+								<a href="#sec2" class="prevposts-link btn-disabled transition"><i class="fa fa-chevron-left"></i></a>
+							} else {
+								<a href="@routes.Blog.blog(lang().code(),currentPage-1)" class="prevposts-link transition"><i class="fa fa-chevron-left"></i></a>
+							}
+		                    @for(index <- 1 to pages) {
 		    	                @if(index==currentPage) {
-								  <a href="#" class="blog-page current-page transition">index</a>
+								  <a href="@routes.Blog.blog(lang().code(),index)" class="blog-page current-page transition">@index</a>
 								} else {
-								  <a href="#" class="blog-page transition">index</a>
+								  <a href="@routes.Blog.blog(lang().code(),index)" class="blog-page transition">@index</a>
 								}
 							}
-	                        <a href="#" class="nextposts-link transition"><i class="fa fa-chevron-right"></i></a>
+							
+							@if(currentPage == pages) {
+								<a href="#sec2" class="nextposts-link btn-disabled transition"><i class="fa fa-chevron-right"></i></a>
+
+							} else {
+								<a href="@routes.Blog.blog(lang().code(),currentPage+1)" class="nextposts-link transition"><i class="fa fa-chevron-right"></i></a>
+							}
+	                        
 	                     </div>
 					}
 	                </div>

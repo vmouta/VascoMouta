@@ -22,7 +22,7 @@ public class WordPressWebServiceLocator extends org.apache.axis.client.Service i
     }
 
     // Use to get a proxy class for WordPressWebServiceHttpSoapEndpoint
-    private java.lang.String WordPressWebServiceHttpSoapEndpoint_address = "http://localhost/wordpress/index.php?/wpws";
+    private java.lang.String WordPressWebServiceHttpSoapEndpoint_address = "http://blog.zucred.com/wordpress/index.php?/wpws";
 
     public java.lang.String getWordPressWebServiceHttpSoapEndpointAddress() {
         return WordPressWebServiceHttpSoapEndpoint_address;

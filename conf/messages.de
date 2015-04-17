@@ -102,5 +102,15 @@ widgets.findme=Find Me
 
 blog.title=My Blog
 blog.subtitle=Latest news and curriosities 
+blog.continue=Continue Reading...
+blog.post.view=Let's View
+blog.comment=Comments
+blog.comment.short=com.
+blog.post.view=Let's View
+blog.post.share=Share this post:
 
 share.page=Share This Page
+
+date.format="dd.MMM.yyyy"
+date.format.full=dd MMMM yyyy
+datetime.format="dd.MMM.yyyy HH:mm"

@@ -13,8 +13,9 @@ GET     /$lang<[a-z]{2}>/portfolio.html     controllers.Application.protfolio(la
 GET     /$lang<[a-z]{2}>/resume.html        controllers.Application.resume(lang: String)
 GET     /$lang<[a-z]{2}>/contact.html       controllers.Application.contact(lang: String)
 
-GET     /$lang<[a-z]{2}>/blog.html          controllers.Blog.blog(lang: String)
-
+GET     /$lang<[a-z]{2}>/blog.html          controllers.Blog.blog(lang: String, page:Int ?= 1)
+GET     /$lang<[a-z]{2}>/post/$year<[0-9]{4}>/$month<[0-9]{2}>/$day<[0-9]{2}>/*name          controllers.Blog.post(lang: String, year:Int, month:Int, day:Int, name:String)
+GET     /$lang<[a-z]{2}>/post/*id           controllers.Blog.postById(lang: String, id:String)
 
 GET		/$lang<[a-z]{2}>/portfolio/alianca.html				controllers.Portfolio.alianca(lang: String)
 GET		/$lang<[a-z]{2}>/portfolio/beetagg.html				controllers.Portfolio.beetagg(lang: String)
