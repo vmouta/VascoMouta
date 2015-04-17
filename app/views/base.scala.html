@@ -41,6 +41,23 @@
 			}
 		</script>
 		
+		<!--  The Open Graph protocol -->
+		<meta property="og:title" content="Vasco Mouta"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:url" content="http://www.vascomouta.com/"/>
+		<meta property="og:image" content="@routes.Assets.at("images/nav-img.jpg").absoluteURL()"/>
+		<meta property="og:site_name" content="Vasco Mouta Home Page"/>
+		<meta property="og:description" content="Vasco Mouta website."/>
+		<meta property="fb:admins" content="vasco.mouta"/>
+        
+        <!--  The twitter card -->
+        <meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@@vmouta" />
+		<meta name="twitter:title" content="Vasco Mouta home page" />
+		<meta name="twitter:description" content="Vasco Mouta website." />
+		<meta name="twitter:image" content="@routes.Assets.at("images/nav-img.jpg").absoluteURL()" />
+		<meta name="twitter:url" content="https://www.vascomouta.com" />
+		
 		<!-- languages -->
 		@if(lang().code().equals("pt")) {
 			<link rel="alternate" href="http://vascomouta.com/en" hreflang="en" />
@@ -59,23 +76,6 @@
 			<link rel="alternate" href="http://vascomouta.com/de" hreflang="de" />
 			<link rel="alternate" href="http://vascomouta.com/pt" hreflang="pt" />
 		}
-		
-		<!--  The Open Graph protocol -->
-		<meta property="og:title" content="Vasco Mouta"/>
-		<meta property="og:type" content="website"/>
-		<meta property="og:url" content="http://www.vascomouta.com/"/>
-		<meta property="og:image" content="@routes.Assets.at("images/nav-img.jpg")"/>
-		<meta property="og:site_name" content="Vasco Mouta Home Page"/>
-		<meta property="og:description" content="Vasco Mouta website."/>
-		<meta property="fb:admins" content="vasco.mouta"/>
-        
-        <!--  The twitter card -->
-        <meta name="twitter:card" content="summary" />
-		<meta name="twitter:site" content="@@vmouta" />
-		<meta name="twitter:title" content="Vasco Mouta home page" />
-		<meta name="twitter:description" content="Vasco Mouta website." />
-		<meta name="twitter:image" content="@routes.Assets.at("images/nav-img.jpg")" />
-		<meta name="twitter:url" content="https://www.vascomouta.com" />
         
         <!--=============== css  ===============-->	
         <link rel="stylesheet" type="text/css" href="@routes.Assets.at("css/bootstrap.css")" media="all">
@@ -85,7 +85,7 @@
         <link rel="stylesheet" type="text/css" href="@routes.Assets.at("css/color.css")">
         <link rel="stylesheet" type="text/css" href="@routes.Assets.at("css/vascomouta.css")">
         <!--=============== favicons ===============-->
-        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png").absoluteURL()">
         <link rel=”publisher” href=”http://google.com/+VascoMouta“/>
         <link rel="author href=”http://google.com/+VascoMouta“/>
         

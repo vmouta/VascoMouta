@@ -84,7 +84,7 @@
 
 	                        }
 	                        
-                            <p>@currentPost.getTextShort()</p>
+                            <p>@Html(currentPost.getTextShort())</p>
                             <a href="/@{lang().code()}/post@{currentPost.getRelativeUrl()}" class="ajax post-link">@Messages("blog.continue")</a>
                             <ul class="post-tags">
                                 <li><a href="#">Design</a></li>
@@ -92,7 +92,7 @@
                                 <li><a href="#">Photo</a></li>
                             </ul>
                         </article>
-					}        
+					}
 					<!-- pagination-->
 					@if(pages>1) {
 						<div class="pagination">
