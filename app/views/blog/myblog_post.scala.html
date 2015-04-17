@@ -1,0 +1,248 @@
+@(post: models.Post)
+
+@tags = {
+	<meta name="keywords" content=""/>
+   	<meta name="description" content="Vasco Mouta home page">
+}
+
+@main(post.getTitle(), "blog")(tags) {
+
+	<!--================= Header + Scroll navigation ================-->
+	@navigation_header(true){
+	   
+	}
+	<!--================= section page title ================-->			
+    <section id="sec1" class="page-title-bg">
+    	@if(post.mainImageUrl()==null) {
+    		<div class="bg bg-parallax run-par" style="background-image: url(/images/bg/post.jpg) "></div>
+    	} else {
+        	<div class="bg bg-parallax run-par" style="background-image: url(@post.mainImageUrl("1920", "1280"))"></div>
+        }
+        <div class="overlay over-op6"></div>
+        <div class="container">
+            <div class="content">
+                <div class="page-title-bg-holder">
+                    <h2>@post.getTitle()</h2>
+                    <div class="clearfix"></div>
+                    <span class="separator flt-l color-separator"></span>
+                    <div class="clearfix"></div>
+                    <h4>@post.getDateStringFull() - @post.getAuthor()</h4>
+                    <div class="clearfix"></div>
+                    <a href="#sec2" class="btn flt-l   wht-btn custom-scroll-link  transition">@Messages("blog.post.view")</a>
+                </div>
+            </div>
+        </div>
+    </section>
+	<!-- section end -->
+	<!--================= section post single ================-->
+    <section class="align-text contact-container"  id="sec2">
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 display-posts">
+                        <!--================= post ================-->
+                        <article class="post">
+                            <h4><a href="blog-single.html" class="ajax transition2">@post.getTitle()</a></h4>
+                            <ul class="post-meta">
+                                <li>@post.getDateString()</li>
+                                <li>@post.getNumComments() @Messages("blog.comment.short")</li>
+                                <li><i class="fa fa-heart-o"></i> 151</li>
+                                <li>
+                                    <h5>Posted by @post.getAuthor()</h5>
+                                </li>
+                            </ul>
+                            @if(post.getImagesCount() > 1){
+                            	<div class="post-media">
+                                    <div class="custom-slider-holder">
+                                        <div class="customNavigation">
+                                            <a class="prev-slide transition"><i class="fa fa-chevron-left"></i></a>
+                                            <a class="next-slide transition"><i class="fa fa-chevron-right"></i></a>
+                                        </div>
+                                        <div  class="custom-slider owl-carousel   popup-gallery">
+                                        
+ 	                                       @for(i <- 0 until post.getImagesCount()) {
+	                                            <!--  Black Overlay -->
+	                                            <div class="item">
+	                                                <div class="box-item-holder">
+	                                                    <div class="box-item bl-over">
+	                                                        <div class="box-item-med">
+	                                                            <img src="@post.imageUrl(i,"600", "400")" alt="" class="respimg">
+	                                                            <div class="overlay"></div>
+	                                                        </div>
+	                                                        <div class="box-links">
+	                                                            <a href="@post.imageUrl(i,"600", "400")" class="lin-h"><i class="fa fa-plus"></i></a>
+	                                                        </div>
+	                                                    </div>
+	                                                </div>
+	                                            </div>
+	                                       }
+                                        </div>
+                                    </div>
+                                </div>
+	                        }
+	                        
+	                        @if(post.getImagesCount() == 1){
+	                            <div class="post-media">
+                                   <a href="@post.imageUrl(0,"600", "400")" class="ajax"><img src="@post.imageUrl(0,"600", "400")" alt="" class="respimg"></a>											
+                                </div>
+
+	                        }
+                            
+                            <div class="clearfix"></div>
+                            <div class="separator color-separator flt-l"></div>
+                            <div class="clearfix"></div>
+                            <p>@post.getText()</p>
+                            <ul class="post-tags">
+                                <li><a href="#">Design</a></li>
+                                <li><a href="#">Video</a></li>
+                                <li><a href="#">Photo</a></li>
+                            </ul>
+                        </article>
+                        <div class="row align-text">
+                            <div class="col-md-6">
+                                <h3 class="big-text">@Messages("blog.post.share") </h3>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="share-container no-align-share flt-r"  data-share="['facebook','pinterest','googleplus','twitter','linkedin']"></div>
+                            </div>
+                        </div>
+						<!-- coments -->
+                        <div class="row align-text">
+                            <div class="col-md-12">
+                                <div id="comments">
+                                    <!--title-->
+                                    <h6 id="comments-title">@Messages("blog.comment") <span>( @post.getNumComments() )</span></h6>
+                                    <ul class="commentlist clearafix">
+                                        <li class="comment">
+                                            <div class="comment-body">
+                                                <div class="comment-author">
+                                                    <img alt='' src='/images/blog/users/1.jpg' width="50" height="50">
+                                                </div>
+                                                <cite class="fn"><a href="#">Mery</a></cite>
+                                                <div class="comment-meta">
+                                                    <h6><a href="#">January 02, 2014 at 07:39 am</a> / <a class='comment-reply-link' href="#">Reply</a></h6>
+                                                </div>
+                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo.</p>
+                                            </div>
+                                            <ul class="children">
+                                                <li class="comment">
+                                                    <!--comment body-->
+                                                    <div class="comment-body">
+                                                        <div class="comment-author">
+                                                            <img alt='' src='/images/blog/users/1.jpg' width="50" height="50">
+                                                        </div>
+                                                        <cite class="fn"><a href="#">Audrey</a></cite>
+                                                        <div class="comment-meta">
+                                                            <h6><a href="#">January 18, 2014 at 13:29 am</a> / <a class='comment-reply-link' href="#">Reply</a></h6>
+                                                        </div>
+                                                        <p>Hi There,</p>
+                                                        <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="comment">
+                                            <!--comment body-->
+                                            <div class="comment-body">
+                                                <div class="comment-author">
+                                                    <img alt='' src='/images/blog/users/1.jpg' width="50" height="50">
+                                                </div>
+                                                <cite class="fn"><a href="#">Lisa</a></cite>
+                                                <div class="comment-meta">
+                                                    <h6><a href="#">January 22, 2014 at 03:19 am</a> / <a class='comment-reply-link' href="#">Reply</a></h6>
+                                                </div>
+                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                    <div id="respond" class="clearafix">
+                                        <h6 id="reply-title">Leave A Comment</h6>
+                                        <div class="comment-reply-form clearfix">
+                                            <form action="#" method="post" id="commentform" class="form-horizontal" name="commentform">
+                                                <div class="comment-form-author control-group">
+                                                    <div class="controls">
+                                                        <input id="author" name="author" type="text" value="" size="40" aria-required="true" />
+                                                    </div>
+                                                    <label class="control-label" for="author">Name </label>
+                                                </div>
+                                                <div class="comment-form-email control-group">
+                                                    <div class="controls">
+                                                        <input id="email" name="email" type="text" value="" size="40" aria-required="true" />
+                                                    </div>
+                                                    <label class="control-label" for="email">Email </label>
+                                                </div>
+                                                <div class="comment-form-comment control-group">
+                                                    <div class="controls">
+                                                        <textarea id="comment" name="comment" cols="50" rows="8" aria-required="true" placeholder="Your comment here..">
+                                                        </textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-submit">
+                                                    <div class="controls">
+                                                        <button class="transition button" type="submit">Post Comment</button>
+                                                        <input type='hidden' name='comment_post_ID' value='30' id='comment_post_ID'> <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!--end respond-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	<!-- section end -->
+	<!--================= Section Subscribe ================-->
+	@subscribe()
+	<!-- section end -->
+    <!--================= Section projects - blog navigation ================-->
+    <section class="color-bg">
+        <div class="content">
+            <div class="container">
+                <div class="project-pagination">
+                    <ul>
+                        <li>
+                        	@if(post.getPreviousPost()!=null) {
+	                            <a class="ajax left-nav" href="/@{lang().code()}/post@{post.getPreviousPost().getRelativeUrl()}">
+	                                <i class="fa fa-angle-left"></i>
+	                                <div class="tooltip">
+		                                @if(post.getPreviousPost().mainImageUrl()!=null) {
+								    		<img src="@post.getPreviousPost().imageUrl(0,"600","400")" class="respimg mob-bg" alt="" title="">
+								    	}
+	                                    <h5>@post.getPreviousPost().getTitle()</h5>
+	                                </div>
+	                            </a>
+	                        }
+                        </li>
+                        <li><a href="@routes.Blog.blog(lang().code())" class="ajax"><i class="fa fa-indent"></i></a></li>
+                        <li>
+                        	@if(post.getNextPost()!=null) {
+                            	<a class="ajax right-nav" href="/@{lang().code()}/post@{post.getNextPost().getRelativeUrl()}">
+	                                <i class="fa fa-angle-right"></i>
+	                                <div class="tooltip">
+                                        @if(post.getNextPost().mainImageUrl()!=null) {
+								    		<img src="@post.getNextPost().imageUrl(0,"600","400")" class="respimg mob-bg" alt="" title="">
+								    	}
+	                                    <h5>@post.getNextPost().getTitle()</h5>
+	                                </div>
+	                            </a>
+	                        }
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+	<!-- section end -->
+	<!--================= Section hireme  ================-->
+	@hireme()
+	<!-- section end -->
+	<!--================= Section widgets  ================-->
+    @widgets()
+    <!-- section end -->
+}
