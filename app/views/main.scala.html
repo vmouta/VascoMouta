@@ -2,7 +2,7 @@
 
 @meta = {
 
-	@if(metaData.equals(Html(""))) {
+	@if(metaData.body.length() == 0) {
 		<!--  The Open Graph protocol -->
 		<meta property="og:title" content="Vasco Mouta"/>
 		<meta property="og:type" content="website"/>
@@ -11,7 +11,7 @@
 		<meta property="og:site_name" content="Vasco Mouta Home Page"/>
 		<meta property="og:description" content="Vasco Mouta website."/>
 		<meta property="fb:admins" content="vasco.mouta"/>
-	       
+		
 	    <!--  The twitter card -->
 	    <meta name="twitter:card" content="summary" />
 		<meta name="twitter:site" content="@@vmouta" />
