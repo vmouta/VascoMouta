@@ -3,8 +3,10 @@
 @tags = {
 	<meta name="keywords" content=""/>
    	<meta name="description" content="Vasco Mouta home page">
-   	
-   	<!--  The Open Graph protocol -->
+}
+
+@meta = {
+	<!--  The Open Graph protocol -->
 	<meta property="og:title" content="@post.getTitle()"/>	
 	<meta property="og:type" content="article"/>
 	<meta property="og:site_name" content="Vasco Mouta Blog"/>
@@ -25,7 +27,7 @@
    	}
 }
 
-@main(post.getTitle(), "blog")(tags) {
+@main(post.getTitle(), "blog")(meta)(tags) {
 
 	<!--================= Header + Scroll navigation ================-->
 	@navigation_header(true){

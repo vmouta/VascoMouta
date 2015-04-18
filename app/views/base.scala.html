@@ -1,4 +1,4 @@
-@(title: String, css: Html = Html(""), scripts: Html = Html(""))(body: Html)
+@(title: String, css: Html = Html(""), scripts: Html = Html(""), meta: Html = Html(""))(body: Html)
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,24 +40,7 @@
 							"http://github.com/vmouta"] 
 			}
 		</script>
-		
-		<!--  The Open Graph protocol -->
-		<meta property="og:title" content="Vasco Mouta"/>
-		<meta property="og:type" content="website"/>
-		<meta property="og:url" content="http://www.vascomouta.com/"/>
-		<meta property="og:image" content="@routes.Assets.at("contact/1.jpg").absoluteURL()"/>
-		<meta property="og:site_name" content="Vasco Mouta Home Page"/>
-		<meta property="og:description" content="Vasco Mouta website."/>
-		<meta property="fb:admins" content="vasco.mouta"/>
-        
-        <!--  The twitter card -->
-        <meta name="twitter:card" content="summary" />
-		<meta name="twitter:site" content="@@vmouta" />
-		<meta name="twitter:title" content="Vasco Mouta home page" />
-		<meta name="twitter:description" content="Vasco Mouta website." />
-		<meta name="twitter:image" content="@routes.Assets.at("contact/1.jpg").absoluteURL()" />
-		<meta name="twitter:url" content="https://www.vascomouta.com" />
-		
+
 		<!-- languages -->
 		@if(lang().code().equals("pt")) {
 			<link rel="alternate" href="http://vascomouta.com/en" hreflang="en" />
@@ -76,6 +59,9 @@
 			<link rel="alternate" href="http://vascomouta.com/de" hreflang="de" />
 			<link rel="alternate" href="http://vascomouta.com/pt" hreflang="pt" />
 		}
+		
+		<!-- Meta data for the page  -->
+		@meta
         
         <!--=============== css  ===============-->	
         <link rel="stylesheet" type="text/css" href="@routes.Assets.at("css/bootstrap.css")" media="all">

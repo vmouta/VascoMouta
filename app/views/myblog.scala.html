@@ -3,7 +3,9 @@
 @tags = {
 	<meta name="keywords" content=""/>
    	<meta name="description" content="Vasco Mouta home page">
-   	
+}
+
+@meta = {
    	<!--  The Open Graph protocol -->
 	<meta property="og:title" content="@Messages("blog.title")"/>	
 	<meta property="og:type" content="blog"/>
@@ -21,7 +23,7 @@
    	<meta property="twitter:image" content="(@routes.Assets.at("images/bg/blog.jpg").absoluteURL()"/>
 }
 
-@main(title, "blog")(tags) {
+@main(title, "blog")(meta)(tags) {
 
 	<!--================= Header + Scroll navigation ================-->
 	@navigation_header(true){

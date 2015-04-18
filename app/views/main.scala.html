@@ -1,4 +1,28 @@
-@(title: String, page: String)(parentCss: Html = Html(""), parentScripts: Html = Html(""))(content: Html)
+@(title: String, page: String)(parentCss: Html = Html(""), parentScripts: Html = Html(""))(metaData: Html = Html(""))(content: Html)
+
+@meta = {
+
+	@if(metaData.equals(Html(""))) {
+		<!--  The Open Graph protocol -->
+		<meta property="og:title" content="Vasco Mouta"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:url" content="http://www.vascomouta.com/"/>
+		<meta property="og:image" content="@routes.Assets.at("images/contact/1.jpg").absoluteURL()"/>
+		<meta property="og:site_name" content="Vasco Mouta Home Page"/>
+		<meta property="og:description" content="Vasco Mouta website."/>
+		<meta property="fb:admins" content="vasco.mouta"/>
+	       
+	    <!--  The twitter card -->
+	    <meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@@vmouta" />
+		<meta name="twitter:title" content="Vasco Mouta home page" />
+		<meta name="twitter:description" content="Vasco Mouta website." />
+		<meta name="twitter:image" content="@routes.Assets.at("images/contact/1.jpg").absoluteURL()" />
+		<meta name="twitter:url" content="https://www.vascomouta.com" />
+	} else {
+		@metaData
+	}
+}
 
 @css = {
 	@parentCss
@@ -8,7 +32,7 @@
 	@parentScripts
 }
 
-@base(title, css, scripts) {
+@base(title, css, scripts, meta) {
 
 <!--================= main start ================-->
 <div id="main">
