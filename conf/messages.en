@@ -110,6 +110,12 @@ blog.post.share=Share this post:
 
 share.page=Share This Page
 
+portfolio.images=Project Images 
+portfolio.details=Details
+portfolio.company=Company
+portfolio.category=Category
+portfolio.date=Date
+
 date.format="dd.MMM.yyyy"
 date.format.full=dd MMMM yyyy
 datetime.format="dd.MMM.yyyy HH:mm"

@@ -937,6 +937,18 @@ header.sticky  a  , .flat-header .scroll-nav li a{
 	padding-top:20px;
 	line-height:30px;
 }
+.hero-wrapper a {
+	color:#fff;
+	font-size:18px;
+	max-width:600px;
+	margin:20px auto;
+	position:relative;
+	opacity:0.8;
+	font-family: 'Lato', sans-serif;
+	padding-top:20px;
+	line-height:30px;
+}
+
 .hero-wrapper p:before {
 	content:'';
 	position:absolute;
