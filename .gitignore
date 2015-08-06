@@ -13,3 +13,9 @@ dist
 /.project
 /RUNNING_PID
 /.settings
+.target
+.settings
+.DS_Store
+/bin/
+.cache-main
+.cache-tests

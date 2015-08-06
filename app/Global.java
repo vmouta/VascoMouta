@@ -10,20 +10,11 @@ import play.Application;
 import play.GlobalSettings;
 import play.Logger;
 import play.mvc.*;
-import play.api.mvc.EssentialFilter;
 import play.api.mvc.Handler;
 import play.libs.F.*;
-import play.filters.gzip.GzipFilter;
-import play.filters.headers.SecurityHeadersFilter;
 import static play.mvc.Results.*;
 
 public class Global extends GlobalSettings {
-	
-	// Enable Gzip, secure headers
-	@Override
-	public <T extends EssentialFilter> Class<T>[] filters() {
-        return new Class[]{GzipFilter.class /*, SecurityHeadersFilter.class*/};
-    }
 
 	@Override
 	public void onStart(Application app) {

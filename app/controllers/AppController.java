@@ -117,6 +117,22 @@ public class AppController extends Controller {
 		return null;
 	}
 	
+    public static Result i18nRedirect(String uri) {
+    	Cookie langCookie = request().cookie(Cookies.PLAY_LANG);
+    	if(langCookie == null) {
+    		String lang = Lang.preferred(request().acceptLanguages()).code();
+    		AppLogger.debugLog("Set application language to " + lang);
+    		changeLang(lang);
+    	} else if(findLanguage(langCookie.value()) == null) {
+    		String lang = Lang.preferred(request().acceptLanguages()).code();
+    		AppLogger.debugLog("Language cookie not found set language to " + lang);
+    		changeLang(lang);
+    	} else {
+    		AppLogger.debugLog("Cookie Language " + langCookie.value());
+    	}
+        return redirect("/"+ lang().code() + "/"+ uri);
+    }
+	
 	protected static String logRequest() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("Headers:");

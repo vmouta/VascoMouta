@@ -363,7 +363,7 @@ function initAlexon() {
 //=============== twitter add your username here  after username: " ==============
     if ($("#twitter-feed").length) {
         $("#twitter-feed").tweet({
-            username: "vmouta",
+            username: "vascomouta",
             join_text: "auto",
             avatar_size: 0,
             count: 3

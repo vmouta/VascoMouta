@@ -27,22 +27,6 @@ public class Application extends AppController {
     	return redirect("/"+ lang + "/home.html");
     }
     
-    public static Result i18nRedirect(String uri) {
-    	Cookie langCookie = request().cookie(Cookies.PLAY_LANG);
-    	if(langCookie == null) {
-    		String lang = Lang.preferred(request().acceptLanguages()).code();
-    		AppLogger.debugLog("Set application language to " + lang);
-    		changeLang(lang);
-    	} else if(findLanguage(langCookie.value()) == null) {
-    		String lang = Lang.preferred(request().acceptLanguages()).code();
-    		AppLogger.debugLog("Language cookie not found set language to " + lang);
-    		changeLang(lang);
-    	} else {
-    		AppLogger.debugLog("Cookie Language " + langCookie.value());
-    	}
-        return redirect("/"+ lang().code() + "/"+ uri);
-    }
-    
     public static Result home(String lang) {
     	if(needLanguageRedirect(lang)) return redirect("/"+ lang().code() + "/home.html");
     	return ok(index.render("Vasco Mouta"));
@@ -50,7 +34,7 @@ public class Application extends AppController {
     
     public static Result protfolio(String lang) {
     	if(needLanguageRedirect(lang)) return redirect("/"+ lang().code() + "/protfolio.html");
-        return ok(portfolio.render());
+        return ok(portfolio.render("Vasco Mouta - Portfolio"));
     }
     
     public static Result resume(String lang, int company) {
@@ -60,7 +44,7 @@ public class Application extends AppController {
     
     public static Result contact(String lang) {
     	if(needLanguageRedirect(lang)) return redirect("/"+ lang().code() + "/contact.html");
-        return ok(contact.render());
+        return ok(contact.render("Vasco Mouta - Contact"));
     }
     
     public static Result routerI18n(String lang, String uri) {

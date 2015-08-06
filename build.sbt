@@ -1,10 +1,10 @@
 name := """VascoMouta"""
 
-version := "1.0-SNAPSHOT"
+version := "0.1-SNAPSHOT"
 
 lazy val root = (project in file(".")).enablePlugins(PlayJava)
 
-scalaVersion := "2.11.5"
+scalaVersion := "2.11.6"
 
 libraryDependencies ++= Seq(
   javaCore,
@@ -15,8 +15,7 @@ libraryDependencies ++= Seq(
   "org.apache.axis" % "axis-jaxrpc" % "1.4",
   "org.apache.axis" % "axis" % "1.4",
   "commons-discovery" % "commons-discovery" % "0.5",
-  "org.webjars" %% "webjars-play" % "2.4.0-M3-1-SNAPSHOT",
-  "org.webjars" % "bootstrap" % "3.3.4",
-  "org.webjars" % "jquery" % "2.1.3",
+  "org.webjars" % "bootstrap" % "3.3.5",
+  "org.webjars" % "jquery" % "2.1.4",
   "org.webjars" % "jquery-ui" % "1.11.4"
 )
